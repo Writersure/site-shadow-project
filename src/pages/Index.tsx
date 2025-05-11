@@ -1,54 +1,102 @@
 
-import React, { useEffect } from 'react';
-import Navbar from '@/components/Navbar';
-import HeroSection from '@/components/HeroSection';
-import ServicesSection from '@/components/ServicesSection';
-import AboutSection from '@/components/AboutSection';
-import TeamSection from '@/components/TeamSection';
-import ContactSection from '@/components/ContactSection';
-import Footer from '@/components/Footer';
-import ScrollToTop from '@/components/ScrollToTop';
+import React, { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import About from "@/components/About";
+import Process from "@/components/Process";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
+import Contact from "@/components/Contact";
+import Newsletter from "@/components/Newsletter";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import CaseStudies from "@/components/CaseStudies";
+import HomeAdsPlacement from "@/components/HomeAdsPlacement";
+import { initAnimateOnScroll } from "@/utils/animateOnScroll";
 
 const Index = () => {
   useEffect(() => {
-    // Set page title
-    document.title = 'DigitalHQ - Your Modern Business Hub';
+    // Initialize scroll animations
+    const cleanupAnimation = initAnimateOnScroll();
     
-    // Add scroll reveal functionality
-    const revealElements = document.querySelectorAll('.reveal, .staggered-item');
+    // Update page metadata for SEO
+    document.title = "WriterSure | Premium AI-Powered Content Creation & Digital Services";
     
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    revealElements.forEach(el => {
-      observer.observe(el);
-    });
-
+    // Set meta description for SEO
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute(
+        "content", 
+        "Transform your digital presence with WriterSure's premium AI-powered content creation, ghostwriting, technical writing, and digital services. Expert solutions for businesses worldwide."
+      );
+    }
+    
+    // Add additional meta tags for SEO
+    const head = document.querySelector('head');
+    
+    // Add keywords meta tag
+    const metaKeywords = document.createElement('meta');
+    metaKeywords.setAttribute('name', 'keywords');
+    metaKeywords.setAttribute('content', 'AI content creation, ghostwriting, technical writing, email marketing, virtual assistance, digital services, content strategy, SEO content, professional writing, blog posts');
+    head?.appendChild(metaKeywords);
+    
+    // Add canonical URL
+    const canonicalLink = document.createElement('link');
+    canonicalLink.setAttribute('rel', 'canonical');
+    canonicalLink.setAttribute('href', window.location.href);
+    head?.appendChild(canonicalLink);
+    
+    // Add social media meta tags
+    const ogTitle = document.createElement('meta');
+    ogTitle.setAttribute('property', 'og:title');
+    ogTitle.setAttribute('content', 'WriterSure | Premium AI-Powered Content Creation & Digital Services');
+    head?.appendChild(ogTitle);
+    
+    const ogDescription = document.createElement('meta');
+    ogDescription.setAttribute('property', 'og:description');
+    ogDescription.setAttribute('content', 'Transform your digital presence with WriterSure\'s premium AI-powered content creation and digital services.');
+    head?.appendChild(ogDescription);
+    
+    const ogType = document.createElement('meta');
+    ogType.setAttribute('property', 'og:type');
+    ogType.setAttribute('content', 'website');
+    head?.appendChild(ogType);
+    
+    const ogUrl = document.createElement('meta');
+    ogUrl.setAttribute('property', 'og:url');
+    ogUrl.setAttribute('content', window.location.href);
+    head?.appendChild(ogUrl);
+    
     return () => {
-      revealElements.forEach(el => {
-        observer.unobserve(el);
-      });
+      cleanupAnimation();
+      // Clean up added meta tags
+      if (head) {
+        head.removeChild(metaKeywords);
+        head.removeChild(canonicalLink);
+        head.removeChild(ogTitle);
+        head.removeChild(ogDescription);
+        head.removeChild(ogType);
+        head.removeChild(ogUrl);
+      }
     };
   }, []);
 
   return (
-    <div className="font-['Inter',sans-serif] antialiased">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <TeamSection />
-      <ContactSection />
+      <main className="space-y-0">
+        <Hero />
+        <Services />
+        <About />
+        <HomeAdsPlacement /> {/* Added AdSense placement after About section */}
+        <Process />
+        <CaseStudies />
+        <Testimonials />
+        <FAQ />
+        <Contact />
+        <Newsletter />
+      </main>
       <Footer />
       <ScrollToTop />
     </div>
