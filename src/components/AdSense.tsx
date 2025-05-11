@@ -16,7 +16,8 @@ const AdSense = ({
   style = {}, 
   className = '' 
 }: AdSenseProps) => {
-  const adRef = useRef<HTMLElement>(null);
+  // Changed the type from HTMLElement to HTMLModElement to match the ins element
+  const adRef = useRef<HTMLModElement>(null);
   
   useEffect(() => {
     try {
