@@ -16,7 +16,7 @@ const AdSense = ({
   style = {}, 
   className = '' 
 }: AdSenseProps) => {
-  const adRef = useRef<HTMLDivElement>(null);
+  const adRef = useRef<HTMLElement>(null);
   
   useEffect(() => {
     try {
