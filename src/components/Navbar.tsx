@@ -38,16 +38,16 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
-          <a href="#home" className="font-medium hover:text-primary transition-colors">Home</a>
-          <a href="#services" className="font-medium hover:text-primary transition-colors">Services</a>
-          <a href="#about" className="font-medium hover:text-primary transition-colors">About</a>
-          <a href="#team" className="font-medium hover:text-primary transition-colors">Team</a>
-          <a href="#case-studies" className="font-medium hover:text-primary transition-colors">Case Studies</a>
-          <a href="#contact" className="font-medium hover:text-primary transition-colors">Contact</a>
+          <a href="/#home" className="font-medium hover:text-primary transition-colors">Home</a>
+          <a href="/#services" className="font-medium hover:text-primary transition-colors">Services</a>
+          <a href="/#about" className="font-medium hover:text-primary transition-colors">About</a>
+          <a href="/#team" className="font-medium hover:text-primary transition-colors">Team</a>
+          <Link to="/case-studies" className="font-medium hover:text-primary transition-colors">Success Stories</Link>
+          <a href="/#contact" className="font-medium hover:text-primary transition-colors">Contact</a>
         </div>
 
         <div className="hidden md:block">
-          <a href="#contact">
+          <a href="/#contact">
             <Button>Get Started</Button>
           </a>
         </div>
@@ -71,13 +71,13 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-6 py-4 space-y-4">
-          <a href="#home" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Home</a>
-          <a href="#services" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Services</a>
-          <a href="#about" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>About</a>
-          <a href="#team" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Team</a>
-          <a href="#case-studies" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Case Studies</a>
-          <a href="#contact" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Contact</a>
-          <a href="#contact" onClick={toggleMobileMenu}>
+          <a href="/#home" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Home</a>
+          <a href="/#services" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Services</a>
+          <a href="/#about" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>About</a>
+          <a href="/#team" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Team</a>
+          <Link to="/case-studies" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Success Stories</Link>
+          <a href="/#contact" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Contact</a>
+          <a href="/#contact" onClick={toggleMobileMenu}>
             <Button className="w-full">Get Started</Button>
           </a>
         </div>

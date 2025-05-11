@@ -6,19 +6,19 @@ const caseStudies = [
     id: 1,
     title: 'E-commerce Content Strategy',
     description: '45% increase in conversion rates for a fashion retailer',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f'
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 2,
     title: 'SaaS Company Rebrand',
     description: '72% improvement in user engagement after messaging overhaul',
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d'
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80'
   },
   {
     id: 3,
     title: 'B2B Lead Generation',
     description: 'Tripled qualified leads for a professional services firm',
-    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b'
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80'
   },
 ];
 
@@ -42,6 +42,7 @@ const CaseStudies = () => {
                     src={study.image} 
                     alt={study.title} 
                     className="w-full h-full object-cover transition-transform hover:scale-105"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-6">
@@ -56,7 +57,7 @@ const CaseStudies = () => {
         
         <div className="text-center mt-12 reveal">
           <Link to="/case-studies" className="inline-block px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors">
-            View All Case Studies
+            View All Success Stories
           </Link>
         </div>
       </div>

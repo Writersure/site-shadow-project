@@ -37,23 +37,24 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">AI Content Creation</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Premium Ghostwriting</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Technical Writing</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Email Marketing</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Social Media Marketing</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">AI Content Creation</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Premium Ghostwriting</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Chatbot Development</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Email Marketing</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Social Media Marketing</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Virtual Assistance</a></li>
             </ul>
           </div>
           
           <div>
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-3">
-              <li><a href="#about" className="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="#team" className="text-gray-400 hover:text-primary transition-colors">Our Team</a></li>
-              <li><a href="#process" className="text-gray-400 hover:text-primary transition-colors">Our Process</a></li>
-              <li><a href="#case-studies" className="text-gray-400 hover:text-primary transition-colors">Case Studies</a></li>
-              <li><a href="#testimonials" className="text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
+              <li><a href="/#about" className="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="/#team" className="text-gray-400 hover:text-primary transition-colors">Our Team</a></li>
+              <li><a href="/#process" className="text-gray-400 hover:text-primary transition-colors">Our Process</a></li>
+              <li><Link to="/case-studies" className="text-gray-400 hover:text-primary transition-colors">Success Stories</Link></li>
+              <li><a href="/#testimonials" className="text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
+              <li><a href="/#contact" className="text-gray-400 hover:text-primary transition-colors">Contact</a></li>
             </ul>
           </div>
           

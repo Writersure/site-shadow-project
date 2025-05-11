@@ -1,7 +1,8 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { PenTool, FileText, Mail, Bot, Search, Clock, Instagram } from "lucide-react";
+import { PenTool, FileText, Mail, Bot, Clock, Instagram } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 
 const services = [
@@ -28,12 +29,6 @@ const services = [
     title: "Email Marketing",
     description: "Compelling email campaigns that drive engagement, conversions, and customer loyalty.",
     detailedDescription: "Our Email Marketing service delivers targeted, persuasive email campaigns that nurture leads and build customer relationships. We handle everything from strategy development to content creation, design, automation setup, A/B testing, and performance analysis, ensuring your emails stand out in crowded inboxes and drive measurable results."
-  },
-  {
-    icon: <Search size={40} className="text-primary mb-4" />,
-    title: "SEO Content",
-    description: "Content that ranks well in search engines and drives organic traffic to your website.",
-    detailedDescription: "Our SEO Content service creates strategic, keyword-optimized content that improves your search engine rankings and drives quality organic traffic. We research relevant keywords, analyze competition, and create engaging, valuable content that satisfies both search algorithms and human readers, helping you establish authority in your industry and capture more leads."
   },
   {
     icon: <Instagram size={40} className="text-primary mb-4" />,
