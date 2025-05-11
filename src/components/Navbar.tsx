@@ -1,0 +1,82 @@
+
+import React, { useState, useEffect } from 'react';
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+
+const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  return (
+    <nav 
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+      }`}
+    >
+      <div className="container mx-auto px-6 flex justify-between items-center">
+        <a href="#" className="flex items-center">
+          <span className="font-bold text-2xl text-primary">DigitalHQ</span>
+        </a>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex space-x-8">
+          <a href="#home" className="font-medium hover:text-primary transition-colors">Home</a>
+          <a href="#services" className="font-medium hover:text-primary transition-colors">Services</a>
+          <a href="#about" className="font-medium hover:text-primary transition-colors">About</a>
+          <a href="#team" className="font-medium hover:text-primary transition-colors">Team</a>
+          <a href="#contact" className="font-medium hover:text-primary transition-colors">Contact</a>
+        </div>
+
+        <div className="hidden md:block">
+          <Button>Get Started</Button>
+        </div>
+
+        {/* Mobile menu button */}
+        <div className="md:hidden">
+          <button 
+            onClick={toggleMobileMenu}
+            className="text-gray-600 hover:text-primary"
+            aria-label="Toggle Menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Navigation */}
+      <div 
+        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 transform ${
+          mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}
+      >
+        <div className="container mx-auto px-6 py-4 space-y-4">
+          <a href="#home" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Home</a>
+          <a href="#services" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Services</a>
+          <a href="#about" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>About</a>
+          <a href="#team" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Team</a>
+          <a href="#contact" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Contact</a>
+          <Button className="w-full">Get Started</Button>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
