@@ -1,14 +1,15 @@
-
+import React, { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useEffect } from "react";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CaseStudiesPage from "./pages/CaseStudiesPage";
 import CaseStudyDetail from "./pages/CaseStudyDetail";
+
+// Create a new window.d.ts type definition to avoid TypeScript errors with adsbygoogle
 
 const queryClient = new QueryClient();
 
