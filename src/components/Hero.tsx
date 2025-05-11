@@ -23,16 +23,20 @@ const Hero = () => {
               <span className="text-primary block">Content Partner</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
-              Transform your digital presence with our premium AI-powered content creation, ghostwriting, technical writing, and comprehensive digital services.
+              Transform your digital presence with our premium AI-powered content creation, premium ghostwriting, technical writing, and comprehensive digital services.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="gap-2">
-                Get Started 
-                <ArrowRight size={18} />
-              </Button>
-              <Button variant="outline" size="lg">
-                View Services
-              </Button>
+              <a href="#contact">
+                <Button size="lg" className="gap-2">
+                  Get Started 
+                  <ArrowRight size={18} />
+                </Button>
+              </a>
+              <a href="#services">
+                <Button variant="outline" size="lg">
+                  View Services
+                </Button>
+              </a>
             </div>
           </div>
           <div className="reveal" style={{transitionDelay: '0.2s'}}>

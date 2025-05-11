@@ -12,12 +12,12 @@ const contactInfo = [
   {
     icon: <Mail size={24} className="text-primary" />,
     title: "Email Us",
-    details: "hello@writersure.com"
+    details: "writersure@outlook.com"
   },
   {
     icon: <Phone size={24} className="text-primary" />,
     title: "Call Us",
-    details: "+1 (555) 123-4567"
+    details: "+91 8297297307"
   },
   {
     icon: <MapPin size={24} className="text-primary" />,
@@ -116,7 +116,7 @@ const Contact = () => {
                   <ul className="space-y-1 text-gray-600">
                     <li className="flex justify-between">
                       <span>Monday - Friday</span>
-                      <span>9:00 AM - 6:00 PM ET</span>
+                      <span>9:00 AM - 6:00 PM IST</span>
                     </li>
                     <li className="flex justify-between">
                       <span>Saturday - Sunday</span>

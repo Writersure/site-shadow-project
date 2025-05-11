@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -11,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
             <div className="mb-6">
-              <span className="font-bold text-2xl text-primary">WriterSure</span>
+              <Link to="/" className="font-bold text-2xl text-primary">WriterSure</Link>
             </div>
             <p className="text-gray-400 mb-6">
               Premium AI-powered content creation and digital services for businesses worldwide.
@@ -37,10 +38,10 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <ul className="space-y-3">
               <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">AI Content Creation</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Ghostwriting</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Premium Ghostwriting</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Technical Writing</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Email Marketing</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Chatbot Development</a></li>
+              <li><a href="#services" className="text-gray-400 hover:text-primary transition-colors">Social Media Marketing</a></li>
             </ul>
           </div>
           
@@ -48,6 +49,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <ul className="space-y-3">
               <li><a href="#about" className="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="#team" className="text-gray-400 hover:text-primary transition-colors">Our Team</a></li>
               <li><a href="#process" className="text-gray-400 hover:text-primary transition-colors">Our Process</a></li>
               <li><a href="#case-studies" className="text-gray-400 hover:text-primary transition-colors">Case Studies</a></li>
               <li><a href="#testimonials" className="text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
@@ -56,12 +58,12 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-6">Legal</h3>
+            <h3 className="text-lg font-semibold mb-6">Contact</h3>
             <ul className="space-y-3">
+              <li className="text-gray-400">Email: writersure@outlook.com</li>
+              <li className="text-gray-400">Phone: +91 8297297307</li>
               <li><a href="#" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a></li>
               <li><a href="#" className="text-gray-400 hover:text-primary transition-colors">Terms of Service</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-primary transition-colors">Cookie Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-primary transition-colors">GDPR</a></li>
             </ul>
           </div>
         </div>
@@ -72,9 +74,9 @@ const Footer = () => {
               © {year} WriterSure. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">Terms</a>
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">Privacy</a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">Cookies</a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors">Terms</a>
+              <a href="#" className="text-gray-400 hover:text-primary transition-colors">Sitemap</a>
             </div>
           </div>
         </div>

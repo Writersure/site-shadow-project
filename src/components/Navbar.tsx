@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,9 +32,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="flex items-center">
-          <span className="font-bold text-2xl text-primary">DigitalHQ</span>
-        </a>
+        <Link to="/" className="flex items-center">
+          <span className="font-bold text-2xl text-primary">WriterSure</span>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-8">
@@ -41,11 +42,14 @@ const Navbar = () => {
           <a href="#services" className="font-medium hover:text-primary transition-colors">Services</a>
           <a href="#about" className="font-medium hover:text-primary transition-colors">About</a>
           <a href="#team" className="font-medium hover:text-primary transition-colors">Team</a>
+          <a href="#case-studies" className="font-medium hover:text-primary transition-colors">Case Studies</a>
           <a href="#contact" className="font-medium hover:text-primary transition-colors">Contact</a>
         </div>
 
         <div className="hidden md:block">
-          <Button>Get Started</Button>
+          <a href="#contact">
+            <Button>Get Started</Button>
+          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -71,8 +75,11 @@ const Navbar = () => {
           <a href="#services" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Services</a>
           <a href="#about" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>About</a>
           <a href="#team" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Team</a>
+          <a href="#case-studies" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Case Studies</a>
           <a href="#contact" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Contact</a>
-          <Button className="w-full">Get Started</Button>
+          <a href="#contact" onClick={toggleMobileMenu}>
+            <Button className="w-full">Get Started</Button>
+          </a>
         </div>
       </div>
     </nav>

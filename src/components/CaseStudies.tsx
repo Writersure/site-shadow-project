@@ -1,25 +1,28 @@
 
 import { Link } from 'react-router-dom';
 
-const CaseStudies = () => {
-  const caseStudies = [
-    {
-      id: 1,
-      title: 'E-commerce Content Strategy',
-      description: '45% increase in conversion rates for a fashion retailer',
-    },
-    {
-      id: 2,
-      title: 'SaaS Company Rebrand',
-      description: '72% improvement in user engagement after messaging overhaul',
-    },
-    {
-      id: 3,
-      title: 'B2B Lead Generation',
-      description: 'Tripled qualified leads for a professional services firm',
-    },
-  ];
+const caseStudies = [
+  {
+    id: 1,
+    title: 'E-commerce Content Strategy',
+    description: '45% increase in conversion rates for a fashion retailer',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f'
+  },
+  {
+    id: 2,
+    title: 'SaaS Company Rebrand',
+    description: '72% improvement in user engagement after messaging overhaul',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d'
+  },
+  {
+    id: 3,
+    title: 'B2B Lead Generation',
+    description: 'Tripled qualified leads for a professional services firm',
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b'
+  },
+];
 
+const CaseStudies = () => {
   return (
     <section id="case-studies" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
@@ -34,7 +37,13 @@ const CaseStudies = () => {
           {caseStudies.map((study, index) => (
             <div key={study.id} className={`staggered-item hover-card`} style={{ transitionDelay: `${index * 150}ms` }}>
               <Link to={`/case-study/${study.id}`} className="block bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 h-full">
-                <div className="h-48 bg-gray-200"></div>
+                <div className="h-48 bg-gray-200 overflow-hidden">
+                  <img 
+                    src={study.image} 
+                    alt={study.title} 
+                    className="w-full h-full object-cover transition-transform hover:scale-105"
+                  />
+                </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-2">{study.title}</h3>
                   <p className="text-gray-600 mb-4">{study.description}</p>

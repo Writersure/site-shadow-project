@@ -1,9 +1,55 @@
 
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 import { initAnimateOnScroll } from "@/utils/animateOnScroll";
+
+const caseStudies = [
+  {
+    id: 1,
+    title: 'E-commerce Content Strategy',
+    description: '45% increase in conversion rates for a fashion retailer',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
+    category: 'E-commerce'
+  },
+  {
+    id: 2,
+    title: 'SaaS Company Rebrand',
+    description: '72% improvement in user engagement after messaging overhaul',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+    category: 'SaaS'
+  },
+  {
+    id: 3,
+    title: 'B2B Lead Generation',
+    description: 'Tripled qualified leads for a professional services firm',
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+    category: 'B2B'
+  },
+  {
+    id: 4,
+    title: 'Technical Documentation Overhaul',
+    description: '64% decrease in support tickets after documentation redesign',
+    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+    category: 'Technical Writing'
+  },
+  {
+    id: 5,
+    title: 'Healthcare Content Strategy',
+    description: '89% increase in patient engagement with educational content',
+    image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+    category: 'Healthcare'
+  },
+  {
+    id: 6,
+    title: 'Email Marketing Campaign',
+    description: '230% ROI on automated email nurture sequence',
+    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1',
+    category: 'Email Marketing'
+  },
+];
 
 const CaseStudiesPage = () => {
   useEffect(() => {
@@ -21,25 +67,46 @@ const CaseStudiesPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow py-16 px-4 md:px-8 lg:px-12">
+      <main className="flex-grow py-24 px-4 md:px-8 lg:px-12">
         <div className="container mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 reveal">Case Studies</h1>
-          <p className="text-lg text-gray-600 mb-12 max-w-3xl reveal">
-            Explore our detailed case studies to see how we've helped businesses transform their digital presence and achieve remarkable results.
-          </p>
+          <div className="max-w-3xl mx-auto text-center mb-12 reveal">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8">Our Success Stories</h1>
+            <p className="text-lg text-gray-600 mb-12">
+              Explore our detailed case studies to see how we've helped businesses transform their digital presence and achieve remarkable results through strategic content and marketing solutions.
+            </p>
+          </div>
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {/* Placeholder for case study grid items */}
-            <div className="case-study-card hover-card reveal">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <div className="h-48 bg-gray-200"></div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">E-commerce Revenue Growth</h3>
-                  <p className="text-gray-600 mb-4">How we helped an online retailer increase conversion rates by 45% with targeted content.</p>
-                  <a href="/case-study/1" className="text-primary font-medium hover:underline">Read Case Study</a>
-                </div>
+            {caseStudies.map((study, index) => (
+              <div key={study.id} className="case-study-card hover-card reveal" style={{ transitionDelay: `${index * 100}ms` }}>
+                <Link to={`/case-study/${study.id}`} className="block bg-white rounded-lg shadow-md overflow-hidden h-full">
+                  <div className="h-48 overflow-hidden">
+                    <img 
+                      src={study.image} 
+                      alt={study.title} 
+                      className="w-full h-full object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
+                  <div className="p-6">
+                    <span className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-3">
+                      {study.category}
+                    </span>
+                    <h3 className="text-xl font-bold mb-2">{study.title}</h3>
+                    <p className="text-gray-600 mb-4">{study.description}</p>
+                    <span className="text-primary font-medium hover:underline">Read Case Study →</span>
+                  </div>
+                </Link>
               </div>
-            </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-16 reveal">
+            <p className="text-lg mb-6">
+              Want to see similar results for your business?
+            </p>
+            <a href="/#contact" className="inline-block px-8 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors">
+              Contact Us Today
+            </a>
           </div>
         </div>
       </main>

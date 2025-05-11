@@ -1,8 +1,10 @@
+
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
 import About from "@/components/About";
+import Team from "@/components/Team";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -37,7 +39,7 @@ const Index = () => {
     // Add keywords meta tag
     const metaKeywords = document.createElement('meta');
     metaKeywords.setAttribute('name', 'keywords');
-    metaKeywords.setAttribute('content', 'AI content creation, ghostwriting, technical writing, email marketing, virtual assistance, digital services, content strategy, SEO content, professional writing, blog posts');
+    metaKeywords.setAttribute('content', 'AI content creation, premium ghostwriting, technical writing, email marketing, social media marketing, digital services, content strategy, SEO content, professional writing, blog posts');
     head?.appendChild(metaKeywords);
     
     // Add canonical URL
@@ -88,8 +90,9 @@ const Index = () => {
         <Hero />
         <Services />
         <About />
-        <HomeAdsPlacement /> {/* Added AdSense placement after About section */}
+        <HomeAdsPlacement /> {/* AdSense placement after About section */}
         <Process />
+        <Team /> {/* Added Team section */}
         <CaseStudies />
         <Testimonials />
         <FAQ />
