@@ -7,33 +7,35 @@ const Hero = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-screen flex flex-col justify-center bg-gradient-to-r from-blue-50 to-indigo-50 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center bg-gradient-to-r from-gray-50 to-purple-50 overflow-hidden"
     >
-      <div className="absolute w-96 h-96 bg-primary/10 rounded-full -top-20 -left-20 blur-3xl"></div>
-      <div className="absolute w-80 h-80 bg-blue-400/10 rounded-full -bottom-20 -right-20 blur-3xl"></div>
+      <div className="absolute w-96 h-96 bg-purple-600/10 rounded-full -top-20 -left-20 blur-3xl"></div>
+      <div className="absolute w-80 h-80 bg-purple-500/10 rounded-full -bottom-20 -right-20 blur-3xl"></div>
       
       <div className="container mx-auto px-6 pt-32 pb-16 md:py-24 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="reveal">
-            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block">
+            <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block">
               Premium Content & Digital Services
             </span>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
-              Your AI-Powered
-              <span className="text-primary block">Content Partner</span>
+              Premium AI-
+              <span className="text-purple-800 block">Powered Content</span>
+              <span className="text-amber-600">Creation</span> & Digital
+              <span className="block">Services</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
               Transform your digital presence with our premium AI-powered content creation, premium ghostwriting, technical writing, and comprehensive digital services.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#services">
-                <Button size="lg" className="gap-2">
+              <a href="#contact">
+                <Button size="lg" className="gap-2 bg-purple-800 hover:bg-purple-900">
                   Get Started 
                   <ArrowRight size={18} />
                 </Button>
               </a>
               <a href="#services">
-                <Button variant="outline" size="lg">
+                <Button variant="outline" size="lg" className="border-purple-800 text-purple-800 hover:bg-purple-100">
                   View Services
                 </Button>
               </a>
@@ -56,7 +58,7 @@ const Hero = () => {
               </div>
               <div className="absolute -top-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-blue-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
                   <span className="font-semibold">Expert Writers</span>
                 </div>
               </div>
@@ -70,7 +72,7 @@ const Hero = () => {
           href="#services"
           className="animate-bounce bg-white p-2 w-10 h-10 ring-1 ring-slate-200/20 shadow-lg rounded-full flex items-center justify-center"
         >
-          <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 text-purple-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
           </svg>
         </a>

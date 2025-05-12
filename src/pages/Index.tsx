@@ -39,7 +39,7 @@ const Index = () => {
     // Add keywords meta tag
     const metaKeywords = document.createElement('meta');
     metaKeywords.setAttribute('name', 'keywords');
-    metaKeywords.setAttribute('content', 'AI content creation, premium ghostwriting, technical writing, email marketing, social media marketing, digital services, content strategy, SEO content, professional writing, blog posts');
+    metaKeywords.setAttribute('content', 'AI content creation, premium ghostwriting, technical writing, email marketing, social media marketing, digital services, content strategy, professional writing, blog posts');
     head?.appendChild(metaKeywords);
     
     // Add canonical URL
@@ -92,7 +92,7 @@ const Index = () => {
         <About />
         <HomeAdsPlacement /> {/* AdSense placement after About section */}
         <Process />
-        <Team /> {/* Added Team section */}
+        <Team /> 
         <CaseStudies />
         <Testimonials />
         <FAQ />

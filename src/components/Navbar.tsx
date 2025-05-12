@@ -33,22 +33,22 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="font-bold text-2xl text-primary">WriterSure</span>
+          <span className="font-bold text-2xl text-purple-800">WriterSure</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="flex space-x-5">
-            <a href="/#home" className="font-medium hover:text-primary transition-colors">Home</a>
-            <a href="/#services" className="font-medium hover:text-primary transition-colors">Services</a>
-            <a href="/#about" className="font-medium hover:text-primary transition-colors">About</a>
-            <a href="/#team" className="font-medium hover:text-primary transition-colors">Team</a>
-            <Link to="/case-studies" className="font-medium hover:text-primary transition-colors">Success Stories</Link>
-            <a href="/#contact" className="font-medium hover:text-primary transition-colors">Contact Us</a>
+            <a href="/#home" className="font-medium hover:text-purple-800 transition-colors">Home</a>
+            <a href="/#services" className="font-medium hover:text-purple-800 transition-colors">Services</a>
+            <a href="/#about" className="font-medium hover:text-purple-800 transition-colors">About</a>
+            <a href="/#team" className="font-medium hover:text-purple-800 transition-colors">Team</a>
+            <Link to="/case-studies" className="font-medium hover:text-purple-800 transition-colors">Success Stories</Link>
+            <a href="/#contact" className="font-medium hover:text-purple-800 transition-colors">Contact Us</a>
           </div>
 
-          <a href="/#services">
-            <Button>Get Started</Button>
+          <a href="/#contact">
+            <Button className="bg-purple-800 hover:bg-purple-900">Get Started</Button>
           </a>
         </div>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button 
             onClick={toggleMobileMenu}
-            className="text-gray-600 hover:text-primary"
+            className="text-gray-600 hover:text-purple-800"
             aria-label="Toggle Menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -71,14 +71,14 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-6 py-4 space-y-4">
-          <a href="/#home" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Home</a>
-          <a href="/#services" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Services</a>
-          <a href="/#about" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>About</a>
-          <a href="/#team" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Team</a>
-          <Link to="/case-studies" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Success Stories</Link>
-          <a href="/#contact" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Contact Us</a>
-          <a href="/#services" onClick={toggleMobileMenu}>
-            <Button className="w-full">Get Started</Button>
+          <a href="/#home" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Home</a>
+          <a href="/#services" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Services</a>
+          <a href="/#about" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>About</a>
+          <a href="/#team" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Team</a>
+          <Link to="/case-studies" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Success Stories</Link>
+          <a href="/#contact" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Contact Us</a>
+          <a href="/#contact" onClick={toggleMobileMenu}>
+            <Button className="w-full bg-purple-800 hover:bg-purple-900">Get Started</Button>
           </a>
         </div>
       </div>
