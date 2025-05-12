@@ -71,7 +71,7 @@ const CaseStudyDetail = () => {
           <div className="container mx-auto max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-8">Case Study Not Found</h1>
             <p>Sorry, we couldn't find the case study you're looking for.</p>
-            <Link to="/case-studies" className="text-primary font-medium hover:underline mt-4 inline-flex items-center">
+            <Link to="/case-studies" className="text-purple-800 font-medium hover:underline mt-4 inline-flex items-center">
               <ArrowLeftIcon size={16} className="mr-2" /> Back to All Case Studies
             </Link>
           </div>
@@ -82,54 +82,59 @@ const CaseStudyDetail = () => {
   }
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-50 to-white">
       <Navbar />
-      <main className="flex-grow py-16 px-4 md:px-8 lg:px-12">
+      <main className="flex-grow pt-28 pb-16 px-4 md:px-8 lg:px-12">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8 reveal">{caseStudy.title}</h1>
-          <p className="text-xl text-primary font-medium mb-8 reveal">Client: {caseStudy.client}</p>
-          
           <div className="mb-8 reveal">
+            <Link to="/case-studies" className="text-purple-800 font-medium hover:underline inline-flex items-center mb-4">
+              <ArrowLeftIcon size={16} className="mr-2" /> Back to All Case Studies
+            </Link>
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-purple-800 reveal">{caseStudy.title}</h1>
+            <p className="text-xl font-medium mb-8 reveal text-purple-600">Client: {caseStudy.client}</p>
+          </div>
+          
+          <div className="mb-12 reveal rounded-2xl overflow-hidden shadow-xl">
             <img 
               src={caseStudy.image} 
               alt={caseStudy.title} 
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-auto object-cover"
             />
           </div>
           
           <div className="prose max-w-none">
-            <div className="mb-8 reveal">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">The Challenge</h2>
-              <p className="text-lg text-gray-600">
+            <div className="mb-12 reveal bg-white p-8 rounded-2xl shadow-md">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-purple-800">The Challenge</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
                 {caseStudy.challenge}
               </p>
             </div>
             
-            <div className="mb-8 reveal">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">Our Approach</h2>
-              <p className="text-lg text-gray-600">
+            <div className="mb-12 reveal bg-white p-8 rounded-2xl shadow-md">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-purple-800">Our Approach</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
                 {caseStudy.approach}
               </p>
             </div>
             
-            <div className="mb-8 reveal">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">Results</h2>
-              <p className="text-lg text-gray-600">
+            <div className="mb-12 reveal bg-white p-8 rounded-2xl shadow-md">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-purple-800">Results</h2>
+              <p className="text-lg text-gray-700 leading-relaxed">
                 {caseStudy.results}
               </p>
             </div>
             
-            <div className="mb-8 reveal bg-gray-50 p-6 rounded-lg border-l-4 border-primary">
-              <h2 className="text-2xl md:text-3xl font-semibold mb-4">Client Testimonial</h2>
-              <blockquote className="text-lg text-gray-600 italic">
+            <div className="mb-12 reveal bg-gradient-to-br from-purple-100 to-purple-50 p-8 rounded-2xl shadow-md border-l-4 border-purple-800">
+              <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-purple-800">Client Testimonial</h2>
+              <blockquote className="text-lg text-gray-700 italic leading-relaxed">
                 "{caseStudy.testimonial}"
               </blockquote>
             </div>
           </div>
           
-          <div className="mt-12 reveal">
-            <Link to="/case-studies" className="text-primary font-medium hover:underline inline-flex items-center">
-              <ArrowLeftIcon size={16} className="mr-2" /> Back to All Case Studies
+          <div className="mt-12 reveal text-center">
+            <Link to="/contact" className="bg-purple-800 hover:bg-purple-900 text-white font-medium py-3 px-8 rounded-full inline-flex items-center transition-colors">
+              Start Your Success Story
             </Link>
           </div>
         </div>

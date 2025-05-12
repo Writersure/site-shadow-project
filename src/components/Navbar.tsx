@@ -47,7 +47,7 @@ const Navbar = () => {
             <a href="/#contact" className="font-medium hover:text-purple-800 transition-colors">Contact Us</a>
           </div>
 
-          <a href="/#contact">
+          <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer">
             <Button className="bg-purple-800 hover:bg-purple-900">Get Started</Button>
           </a>
         </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
           <a href="/#team" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Team</a>
           <Link to="/case-studies" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Success Stories</Link>
           <a href="/#contact" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Contact Us</a>
-          <a href="/#contact" onClick={toggleMobileMenu}>
+          <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu}>
             <Button className="w-full bg-purple-800 hover:bg-purple-900">Get Started</Button>
           </a>
         </div>

@@ -24,10 +24,10 @@ const caseStudies = [
 
 const CaseStudies = () => {
   return (
-    <section id="case-studies" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
+    <section id="case-studies" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gradient-to-br from-purple-50 to-white">
       <div className="container mx-auto">
         <div className="text-center mb-12 reveal">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Success Stories</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-800">Our Success Stories</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             See how we've helped businesses across industries transform their content and achieve remarkable results.
           </p>
@@ -36,7 +36,7 @@ const CaseStudies = () => {
         <div className="grid gap-8 md:grid-cols-3">
           {caseStudies.map((study, index) => (
             <div key={study.id} className={`staggered-item hover-card`} style={{ transitionDelay: `${index * 150}ms` }}>
-              <Link to={`/case-study/${study.id}`} className="block bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 h-full">
+              <Link to={`/case-study/${study.id}`} className="block bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 h-full hover:shadow-xl">
                 <div className="h-48 bg-gray-200 overflow-hidden">
                   <img 
                     src={study.image} 
@@ -46,9 +46,9 @@ const CaseStudies = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{study.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-purple-800">{study.title}</h3>
                   <p className="text-gray-600 mb-4">{study.description}</p>
-                  <span className="text-primary font-medium">Read case study →</span>
+                  <span className="text-purple-800 font-medium">Read case study →</span>
                 </div>
               </Link>
             </div>
@@ -56,7 +56,7 @@ const CaseStudies = () => {
         </div>
         
         <div className="text-center mt-12 reveal">
-          <Link to="/case-studies" className="inline-block px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors">
+          <Link to="/case-studies" className="inline-block px-6 py-3 bg-purple-800 text-white font-medium rounded-full hover:bg-purple-900 transition-colors">
             View All Success Stories
           </Link>
         </div>

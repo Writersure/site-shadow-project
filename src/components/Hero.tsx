@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section 
       id="home"
-      className="relative min-h-screen flex flex-col justify-center bg-gradient-to-r from-gray-50 to-purple-50 overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center bg-gradient-to-br from-purple-100 via-purple-50 to-white overflow-hidden"
     >
       <div className="absolute w-96 h-96 bg-purple-600/10 rounded-full -top-20 -left-20 blur-3xl"></div>
       <div className="absolute w-80 h-80 bg-purple-500/10 rounded-full -bottom-20 -right-20 blur-3xl"></div>
@@ -28,7 +28,7 @@ const Hero = () => {
               Transform your digital presence with our premium AI-powered content creation, premium ghostwriting, technical writing, and comprehensive digital services.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#contact">
+              <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="gap-2 bg-purple-800 hover:bg-purple-900">
                   Get Started 
                   <ArrowRight size={18} />
