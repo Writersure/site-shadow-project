@@ -47,7 +47,7 @@ const Navbar = () => {
             <a href="/#contact" className="font-medium hover:text-primary transition-colors">Contact Us</a>
           </div>
 
-          <a href="/#contact">
+          <a href="/#services">
             <Button>Get Started</Button>
           </a>
         </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
           <a href="/#team" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Team</a>
           <Link to="/case-studies" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Success Stories</Link>
           <a href="/#contact" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Contact Us</a>
-          <a href="/#contact" onClick={toggleMobileMenu}>
+          <a href="/#services" onClick={toggleMobileMenu}>
             <Button className="w-full">Get Started</Button>
           </a>
         </div>

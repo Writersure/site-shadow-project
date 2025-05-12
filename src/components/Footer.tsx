@@ -6,12 +6,12 @@ const Footer = () => {
   const year = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white py-10">
+    <footer className="bg-gray-900 text-white py-8">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-4">
-            <Link to="/" className="font-bold text-2xl text-primary mb-4 inline-block">WriterSure</Link>
-            <p className="text-gray-400 mb-6">
+            <Link to="/" className="font-bold text-2xl text-primary mb-3 inline-block">WriterSure</Link>
+            <p className="text-gray-400 mb-4">
               Premium AI-powered content creation and digital services for businesses worldwide.
             </p>
             <div className="flex space-x-3">
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
           
           <div className="md:col-span-2">
-            <h3 className="text-lg font-semibold mb-3">Services</h3>
+            <h3 className="text-lg font-semibold mb-2">Services</h3>
             <ul className="space-y-1">
               <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors text-sm">AI Content Creation</a></li>
               <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors text-sm">Premium Ghostwriting</a></li>
@@ -49,7 +49,7 @@ const Footer = () => {
           </div>
           
           <div className="md:col-span-2">
-            <h3 className="text-lg font-semibold mb-3">Company</h3>
+            <h3 className="text-lg font-semibold mb-2">Company</h3>
             <ul className="space-y-1">
               <li><a href="/#about" className="text-gray-400 hover:text-primary transition-colors text-sm">About Us</a></li>
               <li><a href="/#team" className="text-gray-400 hover:text-primary transition-colors text-sm">Our Team</a></li>
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
           
           <div className="md:col-span-4">
-            <h3 className="text-lg font-semibold mb-3">Contact</h3>
+            <h3 className="text-lg font-semibold mb-2">Contact</h3>
             <ul className="space-y-1">
               <li className="text-gray-400 text-sm flex items-center">
                 <span className="mr-2">📧</span> writersure@outlook.com
@@ -68,7 +68,7 @@ const Footer = () => {
                 <span className="mr-2">📞</span> +91 8297297307
               </li>
             </ul>
-            <div className="mt-4">
+            <div className="mt-3">
               <a href="/#contact" className="bg-primary text-white py-2 px-4 rounded text-sm hover:bg-primary/90 transition-colors inline-block">
                 Contact Us
               </a>
@@ -76,12 +76,12 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-6 pt-6">
+        <div className="border-t border-gray-800 mt-5 pt-5">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {year} WriterSure. All rights reserved.
             </p>
-            <div className="flex space-x-4 mt-4 md:mt-0">
+            <div className="flex space-x-4 mt-2 md:mt-0">
               <a href="#" className="text-gray-400 text-sm hover:text-primary transition-colors">Privacy Policy</a>
               <a href="#" className="text-gray-400 text-sm hover:text-primary transition-colors">Terms of Service</a>
             </div>

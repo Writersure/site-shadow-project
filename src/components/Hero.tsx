@@ -26,7 +26,7 @@ const Hero = () => {
               Transform your digital presence with our premium AI-powered content creation, premium ghostwriting, technical writing, and comprehensive digital services.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="#contact">
+              <a href="#services">
                 <Button size="lg" className="gap-2">
                   Get Started 
                   <ArrowRight size={18} />
