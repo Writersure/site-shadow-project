@@ -37,16 +37,16 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex space-x-8">
-          <a href="/#home" className="font-medium hover:text-primary transition-colors">Home</a>
-          <a href="/#services" className="font-medium hover:text-primary transition-colors">Services</a>
-          <a href="/#about" className="font-medium hover:text-primary transition-colors">About</a>
-          <a href="/#team" className="font-medium hover:text-primary transition-colors">Team</a>
-          <Link to="/case-studies" className="font-medium hover:text-primary transition-colors">Success Stories</Link>
-          <a href="/#contact" className="font-medium hover:text-primary transition-colors">Contact Us</a>
-        </div>
+        <div className="hidden md:flex items-center space-x-6">
+          <div className="flex space-x-5">
+            <a href="/#home" className="font-medium hover:text-primary transition-colors">Home</a>
+            <a href="/#services" className="font-medium hover:text-primary transition-colors">Services</a>
+            <a href="/#about" className="font-medium hover:text-primary transition-colors">About</a>
+            <a href="/#team" className="font-medium hover:text-primary transition-colors">Team</a>
+            <Link to="/case-studies" className="font-medium hover:text-primary transition-colors">Success Stories</Link>
+            <a href="/#contact" className="font-medium hover:text-primary transition-colors">Contact Us</a>
+          </div>
 
-        <div className="hidden md:block">
           <a href="/#contact">
             <Button>Get Started</Button>
           </a>

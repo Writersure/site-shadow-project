@@ -1,82 +1,89 @@
 
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const year = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white pt-12 pb-6">
+    <footer className="bg-gray-900 text-white py-10">
       <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div>
-            <div className="mb-4">
-              <Link to="/" className="font-bold text-2xl text-primary">WriterSure</Link>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div className="md:col-span-4">
+            <Link to="/" className="font-bold text-2xl text-primary mb-4 inline-block">WriterSure</Link>
             <p className="text-gray-400 mb-6">
               Premium AI-powered content creation and digital services for businesses worldwide.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
-                <Twitter size={18} />
+            <div className="flex space-x-3">
+              <a href="https://x.com/writersure" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-twitter">
+                  <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                </svg>
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
-                <Facebook size={18} />
+              <a href="https://www.instagram.com/writersure/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
               </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
-                <Instagram size={18} />
-              </a>
-              <a href="#" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
-                <Linkedin size={18} />
+              <a href="https://www.threads.com/@writersure" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-primary transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M19 7.5c-1.333-3-3.667-4.5-7-4.5-5 0-8 2.5-8 9s3.5 9 8 9c1.5 0 3.5-.5 5-2" />
+                  <path d="M12 7v10" />
+                  <path d="M15 7h-3" />
+                  <path d="M15 17h-3" />
+                </svg>
               </a>
             </div>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">AI Content Creation</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Premium Ghostwriting</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Chatbot Development</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Email Marketing</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Social Media Marketing</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors">Virtual Assistance</a></li>
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-semibold mb-3">Services</h3>
+            <ul className="space-y-1">
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors text-sm">AI Content Creation</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors text-sm">Premium Ghostwriting</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors text-sm">Chatbot Development</a></li>
+              <li><a href="/#services" className="text-gray-400 hover:text-primary transition-colors text-sm">Email Marketing</a></li>
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li><a href="/#about" className="text-gray-400 hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="/#team" className="text-gray-400 hover:text-primary transition-colors">Our Team</a></li>
-              <li><a href="/#process" className="text-gray-400 hover:text-primary transition-colors">Our Process</a></li>
-              <li><Link to="/case-studies" className="text-gray-400 hover:text-primary transition-colors">Success Stories</Link></li>
-              <li><a href="/#testimonials" className="text-gray-400 hover:text-primary transition-colors">Testimonials</a></li>
-              <li><a href="/#contact" className="text-gray-400 hover:text-primary transition-colors">Contact Us</a></li>
+          <div className="md:col-span-2">
+            <h3 className="text-lg font-semibold mb-3">Company</h3>
+            <ul className="space-y-1">
+              <li><a href="/#about" className="text-gray-400 hover:text-primary transition-colors text-sm">About Us</a></li>
+              <li><a href="/#team" className="text-gray-400 hover:text-primary transition-colors text-sm">Our Team</a></li>
+              <li><Link to="/case-studies" className="text-gray-400 hover:text-primary transition-colors text-sm">Success Stories</Link></li>
+              <li><a href="/#testimonials" className="text-gray-400 hover:text-primary transition-colors text-sm">Testimonials</a></li>
             </ul>
           </div>
           
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400">Email: writersure@outlook.com</li>
-              <li className="text-gray-400">Phone: +91 8297297307</li>
-              <li><a href="#" className="text-gray-400 hover:text-primary transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-primary transition-colors">Terms of Service</a></li>
+          <div className="md:col-span-4">
+            <h3 className="text-lg font-semibold mb-3">Contact</h3>
+            <ul className="space-y-1">
+              <li className="text-gray-400 text-sm flex items-center">
+                <span className="mr-2">📧</span> writersure@outlook.com
+              </li>
+              <li className="text-gray-400 text-sm flex items-center">
+                <span className="mr-2">📞</span> +91 8297297307
+              </li>
             </ul>
+            <div className="mt-4">
+              <a href="/#contact" className="bg-primary text-white py-2 px-4 rounded text-sm hover:bg-primary/90 transition-colors inline-block">
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-8 pt-6">
+        <div className="border-t border-gray-800 mt-6 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">
+            <p className="text-gray-400 text-sm">
               © {year} WriterSure. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">Privacy</a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">Terms</a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">Sitemap</a>
+            <div className="flex space-x-4 mt-4 md:mt-0">
+              <a href="#" className="text-gray-400 text-sm hover:text-primary transition-colors">Privacy Policy</a>
+              <a href="#" className="text-gray-400 text-sm hover:text-primary transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>

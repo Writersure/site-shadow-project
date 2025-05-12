@@ -38,23 +38,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 px-4 md:py-24 md:px-8 lg:px-12">
-      <div className="container mx-auto">
-        <div className="text-center mb-16 reveal">
+    <section id="contact" className="py-16 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-10 reveal">
           <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
             Contact Us
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Ready to elevate your content and digital presence? Contact us today to discuss 
-            your project needs and how we can help you achieve your goals.
+            your project needs.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          <div className="reveal">
-            <Card className="shadow-lg border-none">
-              <div className="p-6">
+        <div className="max-w-6xl mx-auto">
+          <Card className="shadow-lg border-none overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+              {/* Contact Form */}
+              <div className="p-6 lg:p-8 col-span-8 reveal">
                 <h3 className="text-xl font-semibold mb-6">Send Us a Message</h3>
                 <form onSubmit={handleSubmit}>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -78,46 +79,57 @@ const Contact = () => {
                   <Button type="submit" size="lg" className="w-full">Send Message</Button>
                 </form>
               </div>
-            </Card>
-          </div>
-          
-          <div className="reveal" style={{transitionDelay: '0.2s'}}>
-            <div className="bg-primary text-white rounded-lg p-8 h-full">
-              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-              <p className="mb-6">
-                Have questions or ready to start your project? Reach out to us through any 
-                of the channels below and we'll get back to you promptly.
-              </p>
               
-              <div className="space-y-6">
-                {contactInfo.map((item, index) => (
-                  <div key={index} className="flex space-x-4 items-start">
-                    <div className="bg-white/20 p-3 rounded-lg">
-                      {item.icon}
+              {/* Contact Information */}
+              <div className="bg-primary text-white col-span-4 p-6 lg:p-8 reveal" style={{transitionDelay: '0.2s'}}>
+                <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+                <p className="mb-6">
+                  Have questions or ready to start your project? Reach out to us through any 
+                  of these channels.
+                </p>
+                
+                <div className="space-y-6">
+                  {contactInfo.map((item, index) => (
+                    <div key={index} className="flex space-x-4 items-start">
+                      <div className="bg-white/20 p-3 rounded-lg">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <h4 className="font-medium">{item.title}</h4>
+                        <p className="text-white/80">{item.details}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-medium">{item.title}</h4>
-                      <p className="text-white/80">{item.details}</p>
-                    </div>
+                  ))}
+                </div>
+                
+                <div className="mt-8 pt-6 border-t border-white/20">
+                  <h4 className="font-medium mb-4">Follow Us</h4>
+                  <div className="flex space-x-3">
+                    <a href="https://x.com/writersure" target="_blank" rel="noopener noreferrer" className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-twitter">
+                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                      </svg>
+                    </a>
+                    <a href="https://www.instagram.com/writersure/" target="_blank" rel="noopener noreferrer" className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram">
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                      </svg>
+                    </a>
+                    <a href="https://www.threads.com/@writersure" target="_blank" rel="noopener noreferrer" className="bg-white/20 p-2 rounded-full hover:bg-white/30 transition-colors">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M19 7.5c-1.333-3-3.667-4.5-7-4.5-5 0-8 2.5-8 9s3.5 9 8 9c1.5 0 3.5-.5 5-2" />
+                        <path d="M12 7v10" />
+                        <path d="M15 7h-3" />
+                        <path d="M15 17h-3" />
+                      </svg>
+                    </a>
                   </div>
-                ))}
-              </div>
-              
-              <div className="mt-8 pt-6 border-t border-white/20">
-                <h4 className="font-medium mb-2">Business Hours</h4>
-                <ul className="space-y-1 text-white/80">
-                  <li className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 6:00 PM IST</span>
-                  </li>
-                  <li className="flex justify-between">
-                    <span>Saturday - Sunday</span>
-                    <span>Closed</span>
-                  </li>
-                </ul>
+                </div>
               </div>
             </div>
-          </div>
+          </Card>
         </div>
       </div>
     </section>
