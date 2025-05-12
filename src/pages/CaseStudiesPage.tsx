@@ -11,42 +11,42 @@ const caseStudies = [
     id: 1,
     title: 'E-commerce Content Strategy',
     description: '45% increase in conversion rates for a fashion retailer',
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
     category: 'E-commerce'
   },
   {
     id: 2,
     title: 'SaaS Company Rebrand',
     description: '72% improvement in user engagement after messaging overhaul',
-    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+    image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80',
     category: 'SaaS'
   },
   {
     id: 3,
     title: 'B2B Lead Generation',
     description: 'Tripled qualified leads for a professional services firm',
-    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b',
+    image: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80',
     category: 'B2B'
   },
   {
     id: 4,
     title: 'Technical Documentation Overhaul',
     description: '64% decrease in support tickets after documentation redesign',
-    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7',
+    image: 'https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80',
     category: 'Technical Writing'
   },
   {
     id: 5,
     title: 'Healthcare Content Strategy',
     description: '89% increase in patient engagement with educational content',
-    image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22',
+    image: 'https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=800&q=80',
     category: 'Healthcare'
   },
   {
     id: 6,
     title: 'Email Marketing Campaign',
     description: '230% ROI on automated email nurture sequence',
-    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1',
+    image: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=800&q=80',
     category: 'Email Marketing'
   },
 ];
@@ -67,7 +67,7 @@ const CaseStudiesPage = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="flex-grow py-24 px-4 md:px-8 lg:px-12">
+      <main className="flex-grow pt-24 pb-16 px-4 md:px-8 lg:px-12">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-12 reveal">
             <h1 className="text-4xl md:text-5xl font-bold mb-8">Our Success Stories</h1>

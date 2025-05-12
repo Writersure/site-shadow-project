@@ -43,7 +43,7 @@ const Navbar = () => {
           <a href="/#about" className="font-medium hover:text-primary transition-colors">About</a>
           <a href="/#team" className="font-medium hover:text-primary transition-colors">Team</a>
           <Link to="/case-studies" className="font-medium hover:text-primary transition-colors">Success Stories</Link>
-          <a href="/#contact" className="font-medium hover:text-primary transition-colors">Contact</a>
+          <a href="/#contact" className="font-medium hover:text-primary transition-colors">Contact Us</a>
         </div>
 
         <div className="hidden md:block">
@@ -76,7 +76,7 @@ const Navbar = () => {
           <a href="/#about" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>About</a>
           <a href="/#team" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Team</a>
           <Link to="/case-studies" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Success Stories</Link>
-          <a href="/#contact" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Contact</a>
+          <a href="/#contact" className="block font-medium hover:text-primary" onClick={toggleMobileMenu}>Contact Us</a>
           <a href="/#contact" onClick={toggleMobileMenu}>
             <Button className="w-full">Get Started</Button>
           </a>

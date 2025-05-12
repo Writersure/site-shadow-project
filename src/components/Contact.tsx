@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactInfo = [
@@ -82,48 +82,39 @@ const Contact = () => {
           </div>
           
           <div className="reveal" style={{transitionDelay: '0.2s'}}>
-            <div className="h-full flex flex-col">
-              <div className="bg-primary text-white rounded-lg p-8 mb-8">
-                <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
-                <p className="mb-6">
-                  Have questions or ready to start your project? Reach out to us through any 
-                  of the channels below and we'll get back to you promptly.
-                </p>
-                
-                <div className="space-y-6">
-                  {contactInfo.map((item, index) => (
-                    <div key={index} className="flex space-x-4 items-start">
-                      <div className="bg-white/20 p-3 rounded-lg">
-                        {item.icon}
-                      </div>
-                      <div>
-                        <h4 className="font-medium">{item.title}</h4>
-                        <p className="text-white/80">{item.details}</p>
-                      </div>
+            <div className="bg-primary text-white rounded-lg p-8 h-full">
+              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+              <p className="mb-6">
+                Have questions or ready to start your project? Reach out to us through any 
+                of the channels below and we'll get back to you promptly.
+              </p>
+              
+              <div className="space-y-6">
+                {contactInfo.map((item, index) => (
+                  <div key={index} className="flex space-x-4 items-start">
+                    <div className="bg-white/20 p-3 rounded-lg">
+                      {item.icon}
                     </div>
-                  ))}
-                </div>
+                    <div>
+                      <h4 className="font-medium">{item.title}</h4>
+                      <p className="text-white/80">{item.details}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
               
-              <div className="bg-gray-100 rounded-lg p-6 flex-grow">
-                <h3 className="text-xl font-semibold mb-4">Our Response Time</h3>
-                <p className="text-gray-600 mb-4">
-                  We aim to respond to all inquiries within 24 hours during business days.
-                  For urgent matters, please indicate this in your message subject.
-                </p>
-                <div className="bg-white p-4 rounded-md border border-gray-200">
-                  <h4 className="font-medium mb-2">Business Hours</h4>
-                  <ul className="space-y-1 text-gray-600">
-                    <li className="flex justify-between">
-                      <span>Monday - Friday</span>
-                      <span>9:00 AM - 6:00 PM IST</span>
-                    </li>
-                    <li className="flex justify-between">
-                      <span>Saturday - Sunday</span>
-                      <span>Closed</span>
-                    </li>
-                  </ul>
-                </div>
+              <div className="mt-8 pt-6 border-t border-white/20">
+                <h4 className="font-medium mb-2">Business Hours</h4>
+                <ul className="space-y-1 text-white/80">
+                  <li className="flex justify-between">
+                    <span>Monday - Friday</span>
+                    <span>9:00 AM - 6:00 PM IST</span>
+                  </li>
+                  <li className="flex justify-between">
+                    <span>Saturday - Sunday</span>
+                    <span>Closed</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
