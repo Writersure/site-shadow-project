@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 const Hero = () => {
   return (
@@ -13,19 +13,17 @@ const Hero = () => {
       <div className="absolute w-80 h-80 bg-purple-500/10 rounded-full -bottom-20 -right-20 blur-3xl"></div>
       
       <div className="container mx-auto px-6 pt-32 pb-16 md:py-24 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="reveal">
-            <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block">
-              Premium Content & Digital Services
-            </span>
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
               Premium AI-
-              <span className="text-purple-800 block">Powered Content</span>
-              <span className="text-amber-600">Creation</span> & Digital
-              <span className="block">Services</span>
+              <span className="text-purple-800 block">Powered </span>
+              <span className="text-amber-600">Content</span>
+              <span className="block text-purple-800">Creation </span>
+              <span className="block">& Digital Services</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
-              Transform your digital presence with our premium AI-powered content creation, premium ghostwriting, technical writing, and comprehensive digital services.
+              Transform your digital presence with expert ghostwriting, content creation, and AI solutions tailored to elevate your brand and drive business growth.
             </p>
             <div className="flex flex-wrap gap-4">
               <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer">
@@ -41,28 +39,39 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="reveal" style={{transitionDelay: '0.2s'}}>
-            <div className="relative">
-              <div className="bg-white p-2 rounded-2xl shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5" 
-                  alt="Content Creation" 
-                  className="w-full h-auto rounded-xl"
-                />
+          
+          <div className="reveal bg-white rounded-xl shadow-lg p-6 lg:p-8">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-2xl font-bold text-gray-800">Premium Ghostwriting</h2>
+              <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium">Featured Service</span>
+            </div>
+            
+            <p className="text-gray-700 mb-6">
+              Expert content creation that captures your authentic voice while maintaining the highest writing standards.
+            </p>
+            
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center gap-2">
+                <Check size={20} className="text-orange-500" />
+                <span>Blog posts & articles</span>
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-lg">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                  <span className="font-semibold">AI-Powered Solutions</span>
-                </div>
+              <div className="flex items-center gap-2">
+                <Check size={20} className="text-orange-500" />
+                <span>Ebooks & guides</span>
               </div>
-              <div className="absolute -top-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
-                <div className="flex items-center space-x-2">
-                  <div className="w-3 h-3 rounded-full bg-purple-500"></div>
-                  <span className="font-semibold">Expert Writers</span>
-                </div>
+              <div className="flex items-center gap-2">
+                <Check size={20} className="text-orange-500" />
+                <span>Website copy</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check size={20} className="text-orange-500" />
+                <span>LinkedIn & personal branding</span>
               </div>
             </div>
+            
+            <Button className="w-full bg-purple-700 hover:bg-purple-800">
+              Learn More
+            </Button>
           </div>
         </div>
       </div>
