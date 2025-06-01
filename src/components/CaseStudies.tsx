@@ -27,7 +27,7 @@ const CaseStudies = () => {
     <section id="case-studies" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gradient-to-br from-purple-50 to-white">
       <div className="container mx-auto">
         <div className="text-center mb-12 reveal">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-800">Our Success Stories</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Success Stories</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             See how we've helped businesses across industries transform their content and achieve remarkable results.
           </p>
@@ -46,7 +46,7 @@ const CaseStudies = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-purple-800">{study.title}</h3>
+                  <h3 className="text-xl font-bold mb-2 text-black">{study.title}</h3>
                   <p className="text-gray-600 mb-4">{study.description}</p>
                   <span className="text-purple-800 font-medium">Read case study →</span>
                 </div>

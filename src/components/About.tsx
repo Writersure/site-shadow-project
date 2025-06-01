@@ -22,7 +22,7 @@ const About = () => {
               <div className="relative z-10">
                 <img
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
-                  alt="About WriterSure"
+                  alt="About AI Content Agency"
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>
@@ -43,11 +43,11 @@ const About = () => {
             <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block">
               About Us
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
               We're AI content specialists
             </h2>
             <p className="text-gray-600 mb-8">
-              WriterSure combines cutting-edge AI technology with human expertise to deliver 
+              AI Content Agency combines cutting-edge AI technology with human expertise to deliver 
               exceptional content that resonates with your audience and drives results. 
               We're passionate about helping businesses establish a strong digital presence.
             </p>
