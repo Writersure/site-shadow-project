@@ -19,7 +19,7 @@ const Team = () => {
         <div className="text-center mb-16">
           <div className="reveal">
             <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
-              Our Team
+              Our Expert
             </span>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet The Expert</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
