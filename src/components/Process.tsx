@@ -29,7 +29,7 @@ const Process = () => {
     <section id="process" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16 reveal">
-          <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
+          <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
             Our Process
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">How We Work</h2>
@@ -47,8 +47,8 @@ const Process = () => {
               style={{ transitionDelay: `${index * 0.1}s` }}
             >
               <div className="bg-gray-50 p-6 rounded-lg h-full border border-gray-100 hover:shadow-md transition-all duration-300">
-                <div className="text-4xl font-bold text-primary/30 mb-4">{step.number}</div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
+                <div className="text-4xl font-bold text-purple-600/30 mb-4">{step.number}</div>
+                <h3 className="text-xl font-semibold mb-3 text-black">{step.title}</h3>
                 <p className="text-gray-600">{step.description}</p>
               </div>
             </div>
@@ -59,7 +59,7 @@ const Process = () => {
           <p className="text-gray-600 mb-6">
             Ready to transform your digital presence with premium content?
           </p>
-          <a href="#contact" className="inline-block bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg transition-colors">
+          <a href="#contact" className="inline-block bg-purple-600 hover:bg-purple-700 text-white font-medium px-6 py-3 rounded-lg transition-colors">
             Start Your Project Today
           </a>
         </div>

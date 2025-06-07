@@ -16,7 +16,7 @@ const Testimonials = () => {
     <section id="testimonials" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-16 reveal">
-          <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
+          <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
             Testimonials
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">What Our Client Says</h2>
@@ -40,7 +40,7 @@ const Testimonials = () => {
                   <img src={testimonials[0].image} alt={testimonials[0].author} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg">{testimonials[0].author}</h4>
+                  <h4 className="font-semibold text-lg text-black">{testimonials[0].author}</h4>
                   <p className="text-sm text-gray-500">{testimonials[0].position}</p>
                 </div>
               </div>

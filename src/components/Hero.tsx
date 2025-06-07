@@ -42,8 +42,8 @@ const Hero = () => {
           
           <div className="reveal bg-white rounded-xl shadow-lg p-6 lg:p-8">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold text-gray-800">Premium Ghostwriting</h2>
-              <span className="bg-orange-500 text-white px-4 py-1 rounded-full text-sm font-medium">Featured Service</span>
+              <h2 className="text-2xl font-bold text-black">Premium Ghostwriting</h2>
+              <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">Featured Service</span>
             </div>
             
             <p className="text-gray-700 mb-6">
@@ -52,19 +52,19 @@ const Hero = () => {
             
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-2">
-                <Check size={20} className="text-orange-500" />
+                <Check size={20} className="text-purple-500" />
                 <span>Blog posts & articles</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check size={20} className="text-orange-500" />
+                <Check size={20} className="text-purple-500" />
                 <span>Ebooks & guides</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check size={20} className="text-orange-500" />
+                <Check size={20} className="text-purple-500" />
                 <span>Website copy</span>
               </div>
               <div className="flex items-center gap-2">
-                <Check size={20} className="text-orange-500" />
+                <Check size={20} className="text-purple-500" />
                 <span>LinkedIn & personal branding</span>
               </div>
             </div>

@@ -49,8 +49,8 @@ const CaseStudyDetail = () => {
     console.log('Case study ID from URL:', id);
     console.log('Available case studies:', caseStudiesData);
     
-    // Find the case study by ID - ensure we're comparing strings
-    const study = caseStudiesData.find(study => study.id === String(id));
+    // Find the case study by ID - convert URL param to string and match
+    const study = caseStudiesData.find(study => study.id === id);
     console.log('Found case study:', study);
     
     if (study) {
