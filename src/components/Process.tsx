@@ -32,7 +32,7 @@ const Process = () => {
           <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
             Our Process
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">How We Work</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">How We Work</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Our proven process ensures we deliver high-quality content and digital solutions 
             that meet your specific needs and help you achieve your goals.

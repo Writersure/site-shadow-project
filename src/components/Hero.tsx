@@ -16,11 +16,11 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="reveal">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
-              <span className="text-[#3B2144]">Premium AI-</span>
-              <span className="text-[#3B2144] block">Powered </span>
-              <span className="text-[#8847A9] block">Content</span>
-              <span className="text-[#D56D3E] block">Creation </span>
-              <span className="text-[#3B2144] block">& Digital Services</span>
+              <span className="text-black">Premium AI-</span>
+              <span className="text-black block">Powered </span>
+              <span className="text-black block">Content</span>
+              <span className="text-black block">Creation </span>
+              <span className="text-black block">& Digital Services</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
               Transform your digital presence with expert ghostwriting, content creation, and AI solutions tailored to elevate your brand and drive business growth.

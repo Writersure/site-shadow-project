@@ -19,7 +19,7 @@ const Testimonials = () => {
           <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Client Says</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">What Our Client Says</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our satisfied client has to say about 
             our content creation and digital services.

@@ -73,7 +73,7 @@ const ContactSection = () => {
             <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
               Contact Us
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Get In Touch</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Have questions or ready to start your project? Contact us today and our team 
               will get back to you as soon as possible.
