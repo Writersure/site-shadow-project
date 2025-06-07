@@ -20,7 +20,7 @@ const caseStudiesData = [
     testimonial: "WriterSure completely transformed our online presence. The quality of content and strategic approach to our product descriptions and blog has made a measurable difference to our bottom line."
   },
   {
-    id: "2",
+    id: "2", 
     title: "SaaS Company Rebrand",
     client: "CloudSync Software Solutions",
     image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=1200&q=80",
@@ -31,7 +31,7 @@ const caseStudiesData = [
   },
   {
     id: "3",
-    title: "B2B Lead Generation",
+    title: "B2B Lead Generation", 
     client: "GlobalConsult Professional Services",
     image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=1200&q=80",
     challenge: "GlobalConsult was struggling to generate qualified leads through their content marketing efforts. Their existing content was not aligned with their buyer's journey, and they lacked a cohesive strategy for nurturing leads.",
@@ -46,10 +46,17 @@ const CaseStudyDetail = () => {
   const [caseStudy, setCaseStudy] = useState<any>(null);
   
   useEffect(() => {
-    // Find the case study by ID
-    const study = caseStudiesData.find(study => study.id === id);
+    console.log('Case study ID from URL:', id);
+    console.log('Available case studies:', caseStudiesData);
+    
+    // Find the case study by ID - ensure we're comparing strings
+    const study = caseStudiesData.find(study => study.id === String(id));
+    console.log('Found case study:', study);
+    
     if (study) {
       setCaseStudy(study);
+    } else {
+      console.log('No case study found for ID:', id);
     }
     
     // Initialize scroll animations
@@ -69,8 +76,8 @@ const CaseStudyDetail = () => {
         <Navbar />
         <main className="flex-grow py-16 px-4 md:px-8 lg:px-12">
           <div className="container mx-auto max-w-4xl">
-            <h1 className="text-4xl md:text-5xl font-bold mb-8">Case Study Not Found</h1>
-            <p>Sorry, we couldn't find the case study you're looking for.</p>
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-black">Case Study Not Found</h1>
+            <p className="text-gray-600">Sorry, we couldn't find the case study you're looking for.</p>
             <Link to="/case-studies" className="text-purple-600 font-medium hover:underline mt-4 inline-flex items-center">
               <ArrowLeftIcon size={16} className="mr-2" /> Back to All Case Studies
             </Link>
