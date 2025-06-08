@@ -26,7 +26,7 @@ const CaseStudies = () => {
   return (
     <section id="case-studies" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gradient-to-br from-purple-50 to-white">
       <div className="container mx-auto">
-        <div className="text-center mb-12 reveal">
+        <div className="text-center mb-16 reveal">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Success Stories</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             See how we've helped businesses across industries transform their content and achieve remarkable results.
@@ -55,8 +55,8 @@ const CaseStudies = () => {
           ))}
         </div>
         
-        <div className="text-center mt-12 reveal">
-          <Link to="/case-studies" className="inline-block px-6 py-3 bg-purple-600 text-white font-medium rounded-full hover:bg-purple-700 transition-colors">
+        <div className="text-center mt-16 reveal">
+          <Link to="/case-studies" className="inline-block px-8 py-3 bg-purple-600 text-white font-medium rounded-full hover:bg-purple-700 transition-colors">
             View All Success Stories
           </Link>
         </div>

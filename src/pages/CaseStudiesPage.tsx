@@ -57,7 +57,7 @@ const CaseStudiesPage = () => {
     const cleanupAnimation = initAnimateOnScroll();
     
     // Set page title
-    document.title = 'Case Studies | WriterSure';
+    document.title = 'Case Studies | Alex Content';
     
     return () => {
       cleanupAnimation();
@@ -69,8 +69,8 @@ const CaseStudiesPage = () => {
       <Navbar />
       <main className="flex-grow pt-24 pb-16 px-4 md:px-8 lg:px-12">
         <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center mb-12 reveal">
-            <h1 className="text-4xl md:text-5xl font-bold mb-8">Our Success Stories</h1>
+          <div className="max-w-3xl mx-auto text-center mb-16 reveal">
+            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-black">Our Success Stories</h1>
             <p className="text-lg text-gray-600 mb-12">
               Explore our detailed case studies to see how we've helped businesses transform their digital presence and achieve remarkable results through strategic content and marketing solutions.
             </p>
@@ -88,12 +88,12 @@ const CaseStudiesPage = () => {
                     />
                   </div>
                   <div className="p-6">
-                    <span className="inline-block px-3 py-1 text-xs font-semibold text-primary bg-primary/10 rounded-full mb-3">
+                    <span className="inline-block px-3 py-1 text-xs font-semibold text-purple-600 bg-purple-100 rounded-full mb-3">
                       {study.category}
                     </span>
-                    <h3 className="text-xl font-bold mb-2">{study.title}</h3>
+                    <h3 className="text-xl font-bold mb-2 text-black">{study.title}</h3>
                     <p className="text-gray-600 mb-4">{study.description}</p>
-                    <span className="text-primary font-medium hover:underline">Read Case Study →</span>
+                    <span className="text-purple-600 font-medium hover:underline">Read Case Study →</span>
                   </div>
                 </Link>
               </div>
@@ -101,10 +101,10 @@ const CaseStudiesPage = () => {
           </div>
           
           <div className="text-center mt-16 reveal">
-            <p className="text-lg mb-6">
+            <p className="text-lg mb-6 text-gray-600">
               Want to see similar results for your business?
             </p>
-            <a href="/#contact" className="inline-block px-8 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary/90 transition-colors">
+            <a href="/#contact" className="inline-block px-8 py-3 bg-purple-600 text-white font-medium rounded-md hover:bg-purple-700 transition-colors">
               Contact Us Today
             </a>
           </div>

@@ -28,13 +28,13 @@ const Testimonials = () => {
         
         <div className="flex justify-center">
           <div className="w-full max-w-2xl">
-            <Card className="p-6 border-none shadow-md">
-              <div className="mb-4">
+            <Card className="p-8 border-none shadow-md">
+              <div className="mb-6">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <span key={star} className="text-yellow-400 text-xl">★</span>
                 ))}
               </div>
-              <p className="text-gray-700 mb-6 italic text-lg">"{testimonials[0].quote}"</p>
+              <p className="text-gray-700 mb-6 italic text-lg leading-relaxed">"{testimonials[0].quote}"</p>
               <div className="flex items-center">
                 <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                   <img src={testimonials[0].image} alt={testimonials[0].author} className="w-full h-full object-cover" />

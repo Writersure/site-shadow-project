@@ -5,10 +5,10 @@ import { Linkedin, Twitter, Mail } from "lucide-react";
 
 const team = [
   {
-    name: "Alex Mitchell",
-    role: "Content Director",
+    name: "Alex",
+    role: "AI Content Specialist",
     image: "/lovable-uploads/def69d1b-a26e-4e5e-97d9-857e2cf0b414.png",
-    bio: "With 10+ years of experience in content strategy and digital marketing, Alex leads our content creation team."
+    bio: "Expert in AI-powered content creation and digital strategy, specializing in premium ghostwriting and content solutions."
   }
 ];
 
@@ -18,10 +18,10 @@ const Team = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <div className="reveal">
-            <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
+            <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
               Our Expert
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet The Expert</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Meet The Expert</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our talented content specialist brings diverse skills and experience to help your business succeed.
             </p>
@@ -45,15 +45,15 @@ const Team = () => {
                     <a href="#" className="bg-white/20 hover:bg-white/40 p-2 rounded-full backdrop-blur-sm transition-colors">
                       <Linkedin size={18} className="text-white" />
                     </a>
-                    <a href="mailto:writersure@outlook.com" className="bg-white/20 hover:bg-white/40 p-2 rounded-full backdrop-blur-sm transition-colors">
+                    <a href="mailto:contact@alexcontent.com" className="bg-white/20 hover:bg-white/40 p-2 rounded-full backdrop-blur-sm transition-colors">
                       <Mail size={18} className="text-white" />
                     </a>
                   </div>
                 </div>
               </div>
               <CardContent className="pt-4">
-                <h3 className="text-lg font-semibold">{team[0].name}</h3>
-                <p className="text-primary font-medium text-sm mb-2">{team[0].role}</p>
+                <h3 className="text-lg font-semibold text-black">{team[0].name}</h3>
+                <p className="text-purple-600 font-medium text-sm mb-2">{team[0].role}</p>
                 <p className="text-gray-600 text-sm">{team[0].bio}</p>
               </CardContent>
             </Card>
