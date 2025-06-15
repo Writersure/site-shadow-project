@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -136,16 +135,21 @@ const CaseStudyDetail = () => {
               <ArrowLeftIcon size={16} className="mr-2" /> Back to All Case Studies
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Main Content */}
-            <div className="lg:col-span-3">
-              <div className="mb-8 reveal">
+            <section
+              className="lg:col-span-3 bg-white border-4 border-dashed border-red-500 p-8 rounded-xl"
+              // className="lg:col-span-3"
+            >
+              <div style={{marginBottom:'20px', color:'red', fontWeight:'bold'}}>DEBUG: Main case study section should show</div>
+
+              <div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">{caseStudy.title}</h1>
                 <p className="text-xl text-purple-600 font-medium">Client: {caseStudy.client}</p>
               </div>
               
-              <div className="mb-12 reveal rounded-2xl overflow-hidden shadow-xl">
+              <div className="mb-12 rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src={caseStudy.image} 
                   alt={caseStudy.title} 
@@ -158,7 +162,7 @@ const CaseStudyDetail = () => {
               </div>
               
               <div className="space-y-12">
-                <div className="reveal">
+                <div>
                   <Card className="border-none shadow-lg">
                     <CardContent className="p-8">
                       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black">The Challenge</h2>
@@ -169,7 +173,7 @@ const CaseStudyDetail = () => {
                   </Card>
                 </div>
                 
-                <div className="reveal">
+                <div>
                   <Card className="border-none shadow-lg">
                     <CardContent className="p-8">
                       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black">Our Solution</h2>
@@ -180,7 +184,7 @@ const CaseStudyDetail = () => {
                   </Card>
                 </div>
                 
-                <div className="reveal">
+                <div>
                   <Card className="border-none shadow-lg">
                     <CardContent className="p-8">
                       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black">Results Achieved</h2>
@@ -191,7 +195,7 @@ const CaseStudyDetail = () => {
                   </Card>
                 </div>
                 
-                <div className="reveal">
+                <div>
                   <Card className="border-none shadow-lg bg-gradient-to-br from-purple-100 to-purple-50 border-l-4 border-purple-600">
                     <CardContent className="p-8">
                       <h2 className="text-2xl md:text-3xl font-bold mb-6 text-black">Client Feedback</h2>
@@ -208,7 +212,7 @@ const CaseStudyDetail = () => {
                   </Card>
                 </div>
               </div>
-            </div>
+            </section>
             
             {/* Project Details Sidebar */}
             <div className="lg:col-span-1">
