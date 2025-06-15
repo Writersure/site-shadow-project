@@ -20,27 +20,25 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-12 px-4 md:px-8 lg:px-12 bg-gradient-to-r from-primary/90 to-primary">
+    <section className="py-20 px-4 md:py-24 md:px-8 lg:px-12 bg-gradient-to-r from-blue-600 to-blue-500">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto text-center text-white reveal">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">Subscribe to Our Newsletter</h2>
-          <p className="mb-8 opacity-90">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Subscribe to Our Newsletter</h2>
+          <p className="mb-8 opacity-90 text-white">
             Get the latest content tips, industry news, and exclusive offers delivered straight to your inbox.
           </p>
-          
           <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
             <Input
               type="email"
               placeholder="Your email address"
               required
-              className="bg-white/20 border-white/30 text-white placeholder:text-white/70"
+              className="bg-white/30 border-white/50 text-white placeholder:text-white/90"
             />
-            <Button type="submit" variant="secondary">
+            <Button type="submit" variant="secondary" className="bg-white text-black hover:bg-gray-100">
               Subscribe
             </Button>
           </form>
-          
-          <p className="mt-4 text-sm opacity-80">
+          <p className="mt-4 text-sm opacity-90 text-white">
             We respect your privacy and will never share your information.
           </p>
         </div>

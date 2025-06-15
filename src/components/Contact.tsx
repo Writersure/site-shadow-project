@@ -47,11 +47,11 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-r from-purple-900 to-purple-800">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 px-4 md:py-24 md:px-8 lg:px-12 bg-gradient-to-r from-purple-900 to-purple-800">
+      <div className="container mx-auto">
         <div className="text-center mb-10 reveal">
           <SectionEyebrow>Contact Us</SectionEyebrow>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Contact Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Contact Us</h2>
           <p className="text-purple-100 max-w-2xl mx-auto">
             Ready to elevate your digital presence? Reach out to discuss your project and
             discover how our services can help you achieve your goals.
