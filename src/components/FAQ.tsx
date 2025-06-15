@@ -49,8 +49,8 @@ const FAQ = () => {
     <section id="faq" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Frequently Asked <span className="text-gradient font-extrabold" style={{ background: "linear-gradient(90deg,#7D30F6 40%,#F6AD30 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Questions</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-700">
+            Frequently Asked <span className="font-extrabold">Questions</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Find answers to common questions about our services, process, and expertise.
@@ -59,8 +59,14 @@ const FAQ = () => {
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
             {faqs.map((faq, idx) => (
-              <AccordionItem key={idx} value={`item-${idx}`} className="border border-gray-200 rounded-lg overflow-hidden bg-white">
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-100 text-left text-base md:text-lg">{faq.question}</AccordionTrigger>
+              <AccordionItem
+                key={idx}
+                value={`item-${idx}`}
+                className="border border-gray-200 rounded-lg overflow-hidden bg-white"
+              >
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-100 text-left text-base md:text-lg text-purple-700 font-semibold">
+                  {faq.question}
+                </AccordionTrigger>
                 <AccordionContent className="px-6 py-4 text-gray-700">
                   {faq.answer}
                 </AccordionContent>
