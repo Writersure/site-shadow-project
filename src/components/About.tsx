@@ -1,14 +1,15 @@
+
 import React from "react";
 import SectionEyebrow from "./SectionEyebrow";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4 md:py-24 md:px-8 lg:px-12 bg-white">
+    <section id="about" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center reveal">
           <SectionEyebrow>About Us</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">We’re AI content specialists.</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
             Our mission is to empower businesses and individuals by delivering premium, AI-powered content solutions.
             We blend advanced technology with human expertise for flawless results.
           </p>

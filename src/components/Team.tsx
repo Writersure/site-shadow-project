@@ -15,18 +15,15 @@ const team = [
 
 const Team = () => {
   return (
-    <section id="team" className="py-20 px-4 md:py-24 md:px-8 lg:px-12">
+    <section id="team" className="py-16 md:py-24 px-4 md:px-8 lg:px-12">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <div className="reveal">
-            <SectionEyebrow>Our Expert</SectionEyebrow>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Meet The Expert</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Our talented content specialist brings diverse skills and experience to help your business succeed.
-            </p>
-          </div>
+        <div className="text-center reveal">
+          <SectionEyebrow>Our Expert</SectionEyebrow>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Meet The Expert</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+            Our talented content specialist brings diverse skills and experience to help your business succeed.
+          </p>
         </div>
-        
         <div className="flex justify-center">
           <div className="w-full max-w-sm">
             <Card className="hover-card h-full border-none shadow-md overflow-hidden">

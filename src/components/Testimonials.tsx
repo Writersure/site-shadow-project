@@ -14,12 +14,12 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-20 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
+    <section id="testimonials" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center reveal">
           <SectionEyebrow>Testimonials</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">What Our Client Says</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
             Don't just take our word for it. Here's what our satisfied client has to say about 
             our content creation and digital services.
           </p>

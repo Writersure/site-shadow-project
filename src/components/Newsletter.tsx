@@ -20,7 +20,7 @@ const Newsletter = () => {
   };
 
   return (
-    <section className="py-20 px-4 md:py-24 md:px-8 lg:px-12 bg-gradient-to-r from-blue-600 to-blue-500">
+    <section className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-r from-blue-600 to-blue-500">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto text-center text-white reveal">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Subscribe to Our Newsletter</h2>
