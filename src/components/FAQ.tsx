@@ -50,7 +50,7 @@ const FAQ = () => {
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-            Frequently Asked <span className="font-extrabold">Questions</span>
+            Frequently Asked <span className="font-bold">Questions</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Find answers to common questions about our services, process, and expertise.
@@ -90,3 +90,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+
