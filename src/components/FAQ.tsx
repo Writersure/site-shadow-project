@@ -6,68 +6,77 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const faqs = [
   {
-    question: "How does your AI content creation process work?",
-    answer: "Our AI content creation process combines advanced AI technology with human expertise. We start by understanding your needs, then use AI tools to generate initial content, which is then reviewed and refined by our professional writers to ensure quality, accuracy, and alignment with your brand voice."
+    question: "What services does WriterSure offer?",
+    answer: "WriterSure provides AI-powered content creation, copywriting, editing, technical documentation, blog/article writing, customized digital content solutions, and more."
   },
   {
-    question: "What types of content do you create?",
-    answer: "We create a wide range of content including blog posts, articles, website copy, product descriptions, email newsletters, social media content, technical documentation, whitepapers, ebooks, and more. Our versatile team can handle virtually any content need."
+    question: "How does your AI-powered content creation process work?",
+    answer: "We blend advanced AI tools with human creativity. AI generates a draft based on your requirements, and our experts review and refine the content for quality, tone, and originality, ensuring each piece meets your brand standards."
   },
   {
-    question: "How do you ensure the content is SEO-friendly?",
-    answer: "We incorporate SEO best practices into all content we create. This includes thorough keyword research, strategic keyword placement, optimized meta descriptions, proper heading structure, and internal linking recommendations. We stay updated on the latest SEO trends to ensure your content ranks well."
+    question: "Do you offer customized solutions for specific industries?",
+    answer: "Absolutely! We have experience serving diverse industries, including technology, healthcare, e-commerce, finance, legal, and more. We tailor our content strategies to fit your unique sector and business needs."
   },
   {
-    question: "What are your pricing models?",
-    answer: "We offer flexible pricing models including project-based, retainer, and subscription plans. The cost depends on factors such as content type, complexity, research required, and volume. We're happy to provide a personalized quote based on your specific needs."
+    question: "How do you ensure the quality and originality of content?",
+    answer: "Every piece undergoes a multi-step review and plagiarism check to guarantee accuracy and uniqueness. Our editors validate language, flow, and ensure your brand voice and objectives are consistently met."
   },
   {
-    question: "How quickly can you deliver content?",
-    answer: "Our delivery timelines depend on the scope and complexity of your project. For standard blog posts or articles, we typically deliver within 3-5 business days. Larger projects may take longer. We also offer expedited services for urgent needs at an additional cost."
+    question: "What is the typical turnaround time for your services?",
+    answer: "Turnaround times vary based on project scope and requirements. Standard articles or blog posts are usually delivered within 3-5 business days. Larger or urgent projects can be accommodated with prior agreement."
   },
   {
-    question: "Do you offer revisions to the content?",
-    answer: "Yes, we include up to two rounds of revisions with all content projects to ensure you're completely satisfied with the final product. Additional revision rounds can be arranged at an extra cost if needed."
+    question: "Do you offer ongoing support after project completion?",
+    answer: "Yes, we offer post-project support, including revisions, content updates, and consulting to ensure continued satisfaction and optimal results for your content."
+  },
+  {
+    question: "How do you price your services?",
+    answer: "Our pricing is flexible and depends on content type, complexity, research needs, and volume. We offer project-based and retainer models. Contact us for a personalized quote."
+  },
+  {
+    question: "Can you help with implementing AI solutions into my existing business processes?",
+    answer: "Definitely! We provide consulting and technical support for integrating custom AI-driven content and workflow automations tailored to your business operations."
   }
 ];
 
 const FAQ = () => {
   return (
-    <section id="faq" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-white">
+    <section id="faq" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
-        <div className="text-center mb-16 reveal">
-          <span className="bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
-            FAQ
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Frequently Asked <span className="text-gradient font-extrabold" style={{ background: "linear-gradient(90deg,#7D30F6 40%,#F6AD30 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>Questions</span>
+          </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Find answers to common questions about our content creation and digital services.
+            Find answers to common questions about our services, process, and expertise.
           </p>
         </div>
-        
-        <div className="max-w-3xl mx-auto reveal">
+        <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg overflow-hidden">
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-50">{faq.question}</AccordionTrigger>
-                <AccordionContent className="px-6 py-4 text-gray-600">
+            {faqs.map((faq, idx) => (
+              <AccordionItem key={idx} value={`item-${idx}`} className="border border-gray-200 rounded-lg overflow-hidden bg-white">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-100 text-left text-base md:text-lg">{faq.question}</AccordionTrigger>
+                <AccordionContent className="px-6 py-4 text-gray-700">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
-        
-        <div className="mt-12 text-center reveal">
-          <p className="text-gray-600 mb-2">
-            Have more questions?
+        <div className="mt-16 text-center">
+          <p className="text-gray-600 mb-4">
+            Still have questions? We're here to help!
           </p>
-          <a href="#contact" className="text-primary font-medium hover:underline">
-            Contact us for more information
-          </a>
+          <Link to="/#contact">
+            <Button variant="default" size="lg" className="bg-purple-700 hover:bg-purple-800 text-white px-8 py-3 text-base font-medium rounded-md shadow-md">
+              Contact Us
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
@@ -75,3 +84,4 @@ const FAQ = () => {
 };
 
 export default FAQ;
+
