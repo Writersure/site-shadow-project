@@ -39,7 +39,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-purple-600 via-purple-100 to-blue-400">
+    <section id="services" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-white">
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Our Services</SectionEyebrow>

@@ -4,7 +4,7 @@ import SectionEyebrow from "./SectionEyebrow";
 
 const About = () => {
   return (
-    <section id="about" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-purple-100 to-purple-200">
+    <section id="about" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-white">
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>About Us</SectionEyebrow>
