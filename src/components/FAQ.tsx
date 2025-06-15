@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Accordion,
@@ -49,7 +48,7 @@ const FAQ = () => {
     <section id="faq" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-700">
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4 text-primary">
             Frequently Asked <span className="font-extrabold">Questions</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -64,7 +63,7 @@ const FAQ = () => {
                 value={`item-${idx}`}
                 className="border border-gray-200 rounded-lg overflow-hidden bg-white"
               >
-                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-100 text-left text-base md:text-lg text-purple-700 font-semibold">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline hover:bg-gray-100 text-left text-base md:text-lg font-playfair text-primary font-semibold">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="px-6 py-4 text-gray-700">
@@ -79,7 +78,7 @@ const FAQ = () => {
             Still have questions? We're here to help!
           </p>
           <Link to="/#contact">
-            <Button variant="default" size="lg" className="bg-purple-700 hover:bg-purple-800 text-white px-8 py-3 text-base font-medium rounded-md shadow-md">
+            <Button variant="default" size="lg" className="cta-btn">
               Contact Us
             </Button>
           </Link>
@@ -90,4 +89,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

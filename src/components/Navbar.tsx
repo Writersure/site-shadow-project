@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -33,22 +32,21 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center">
-          <span className="font-bold text-2xl text-purple-800">WriterSure</span>
+          <span className="font-playfair font-bold text-2xl text-primary">WriterSure</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="flex space-x-5">
-            <Link to="/#home" className="font-medium hover:text-purple-800 transition-colors">Home</Link>
-            <Link to="/#services" className="font-medium hover:text-purple-800 transition-colors">Services</Link>
-            <Link to="/#about" className="font-medium hover:text-purple-800 transition-colors">About</Link>
-            <Link to="/#team" className="font-medium hover:text-purple-800 transition-colors">Team</Link>
-            <Link to="/case-studies" className="font-medium hover:text-purple-800 transition-colors">Success Stories</Link>
-            <Link to="/#contact" className="font-medium hover:text-purple-800 transition-colors">Contact Us</Link>
+            <Link to="/#home" className="font-medium text-primary hover:underline">Home</Link>
+            <Link to="/#services" className="font-medium text-primary hover:underline">Services</Link>
+            <Link to="/#about" className="font-medium text-primary hover:underline">About</Link>
+            <Link to="/#team" className="font-medium text-primary hover:underline">Team</Link>
+            <Link to="/case-studies" className="font-medium text-primary hover:underline">Success Stories</Link>
+            <Link to="/#contact" className="font-medium text-primary hover:underline">Contact Us</Link>
           </div>
-
           <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-purple-800 hover:bg-purple-900">Get Started</Button>
+            <Button className="cta-btn">Get Started</Button>
           </a>
         </div>
 

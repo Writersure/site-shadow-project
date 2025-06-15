@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -46,10 +45,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-gradient-to-r from-purple-900 to-purple-800">
+    <section 
+      id="contact"
+      className="py-16 bg-gradient-to-r from-purple-900 to-purple-800"
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 reveal">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Contact <span className="text-amber-400">Us</span></h2>
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold mb-4 text-primary">Contact <span className="text-accent">Us</span></h2>
           <p className="text-purple-100 max-w-2xl mx-auto">
             Ready to elevate your digital presence? Reach out to discuss your project and
             discover how our services can help you achieve your goals.
@@ -103,7 +105,7 @@ const Contact = () => {
                   href="https://calendly.com/writersure369/30min" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="bg-amber-500 text-white py-3 px-6 rounded-md text-center block hover:bg-amber-600 transition-colors"
+                  className="cta-btn block text-center"
                 >
                   Book a Call
                 </a>
@@ -162,7 +164,7 @@ const Contact = () => {
                   <Label htmlFor="message">Your Message</Label>
                   <Textarea id="message" placeholder="Tell us about your project or inquiry..." rows={5} required />
                 </div>
-                <Button type="submit" size="lg" className="w-full bg-purple-800 hover:bg-purple-900">Send Message</Button>
+                <Button type="submit" size="lg" className="w-full cta-btn">Send Message</Button>
               </form>
             </div>
           </div>

@@ -84,25 +84,26 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      <main className="space-y-16">
-        <Hero />
-        <Services />
-        <About />
-        <HomeAdsPlacement />
-        <Process />
-        <Team /> 
-        <CaseStudies />
-        <Testimonials />
-        <FAQ />
-        <Contact />
-        <Newsletter />
-      </main>
-      <Footer />
-      <ScrollToTop />
-    </div>
-  );
-};
-
-export default Index;
+-    <div className="flex flex-col min-h-screen">
++    <div className="flex flex-col min-h-screen bg-white">
+       <Navbar />
+       <main className="space-y-16">
+         <Hero />
+         <Services />
+         <About />
+         <HomeAdsPlacement />
+         <Process />
+         <Team /> 
+         <CaseStudies />
+         <Testimonials />
+         <FAQ />
+         <Contact />
+         <Newsletter />
+       </main>
+       <Footer />
+       <ScrollToTop />
+     </div>
+   );
+ };
+ 
+ export default Index;
