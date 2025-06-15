@@ -19,7 +19,7 @@ const Testimonials = () => {
           <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
             Testimonials
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">What Our Client Says</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">What Our Client Says</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our satisfied client has to say about 
             our content creation and digital services.
@@ -40,7 +40,7 @@ const Testimonials = () => {
                   <img src={testimonials[0].image} alt={testimonials[0].author} className="w-full h-full object-cover" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg text-black">{testimonials[0].author}</h4>
+                  <h4 className="font-semibold text-lg text-primary">{testimonials[0].author}</h4>
                   <p className="text-sm text-gray-500">{testimonials[0].position}</p>
                 </div>
               </div>
