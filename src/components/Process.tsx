@@ -1,5 +1,5 @@
-
 import React from 'react';
+import SectionEyebrow from "./SectionEyebrow";
 
 const steps = [
   {
@@ -29,9 +29,7 @@ const Process = () => {
     <section id="process" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16 reveal">
-          <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
-            Our Process
-          </span>
+          <SectionEyebrow>Our Process</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">How We Work</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Our proven process ensures we deliver high-quality content and digital solutions 
@@ -67,5 +65,4 @@ const Process = () => {
     </section>
   );
 };
-
 export default Process;

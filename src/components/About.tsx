@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
+import SectionEyebrow from "./SectionEyebrow";
 
 const features = [
   "AI-powered content creation",
@@ -40,9 +41,7 @@ const About = () => {
             className="reveal order-1 md:order-2"
             style={{transitionDelay: '0.2s'}}
           >
-            <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block">
-              About Us
-            </span>
+            <SectionEyebrow>About Us</SectionEyebrow>
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               We're AI content specialists
             </h2>
@@ -51,7 +50,6 @@ const About = () => {
               exceptional content that resonates with your audience and drives results. 
               We're passionate about helping businesses establish a strong digital presence.
             </p>
-            
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 mb-8">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-2">
@@ -60,7 +58,6 @@ const About = () => {
                 </div>
               ))}
             </div>
-            
             <a href="#contact">
               <Button size="lg" className="bg-purple-600 hover:bg-purple-700">
                 Learn More About Us

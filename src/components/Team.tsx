@@ -1,7 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Linkedin, Twitter, Mail } from "lucide-react";
+import SectionEyebrow from "./SectionEyebrow";
 
 const team = [
   {
@@ -18,9 +18,7 @@ const Team = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <div className="reveal">
-            <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
-              Our Expert
-            </span>
+            <SectionEyebrow>Our Expert</SectionEyebrow>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Meet The Expert</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our talented content specialist brings diverse skills and experience to help your business succeed.

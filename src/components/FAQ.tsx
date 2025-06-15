@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Accordion,
@@ -8,6 +7,7 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import SectionEyebrow from "./SectionEyebrow";
 
 const faqs = [
   {
@@ -49,8 +49,9 @@ const FAQ = () => {
     <section id="faq" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
+          <SectionEyebrow>FAQ</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
-            Frequently Asked <span className="font-bold">Questions</span>
+            Frequently Asked Questions
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Find answers to common questions about our services, process, and expertise.
@@ -90,4 +91,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

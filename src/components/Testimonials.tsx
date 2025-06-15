@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Card } from "@/components/ui/card";
+import SectionEyebrow from "./SectionEyebrow";
 
 const testimonials = [
   {
@@ -16,16 +17,13 @@ const Testimonials = () => {
     <section id="testimonials" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-16 reveal">
-          <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
-            Testimonials
-          </span>
+          <SectionEyebrow>Testimonials</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">What Our Client Says</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our satisfied client has to say about 
             our content creation and digital services.
           </p>
         </div>
-        
         <div className="flex justify-center">
           <div className="w-full max-w-2xl">
             <Card className="p-8 border-none shadow-md">
