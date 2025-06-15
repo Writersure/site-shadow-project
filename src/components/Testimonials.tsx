@@ -14,7 +14,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gray-50">
+    <section id="testimonials" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-blue-50">
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Testimonials</SectionEyebrow>

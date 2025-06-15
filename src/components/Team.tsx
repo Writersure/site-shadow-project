@@ -15,7 +15,7 @@ const team = [
 
 const Team = () => {
   return (
-    <section id="team" className="py-16 md:py-24 px-4 md:px-8 lg:px-12">
+    <section id="team" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-b from-blue-100 to-blue-200">
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Our Expert</SectionEyebrow>

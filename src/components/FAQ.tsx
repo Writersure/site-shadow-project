@@ -47,7 +47,7 @@ const faqData = [
 ];
 
 const FAQ = () => (
-  <section id="faq" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-white">
+  <section id="faq" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-blue-50 to-blue-100">
     <div className="container mx-auto">
       <div className="text-center reveal">
         <SectionEyebrow>FAQs</SectionEyebrow>
