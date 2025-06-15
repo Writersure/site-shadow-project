@@ -1,4 +1,3 @@
-
 import React from "react";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -68,9 +67,9 @@ const Services = () => {
       </div>
       {/* Bottom fade into white */}
       <div 
-        className="pointer-events-none absolute bottom-0 left-0 w-full h-12 lg:h-16"
+        className="pointer-events-none absolute bottom-0 left-0 w-full h-8 lg:h-12 z-0"
         style={{
-          background: "linear-gradient(to bottom, rgba(244,241,255,0.7) 0%, #fff 100%)"
+          background: "linear-gradient(to bottom, rgba(244,241,255,0.04) 0%, #fff 100%)"
         }}
       />
     </section>
@@ -78,4 +77,3 @@ const Services = () => {
 };
 
 export default Services;
-

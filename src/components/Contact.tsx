@@ -49,12 +49,12 @@ const Contact = () => {
     <section id="contact" className="relative py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-r from-purple-900 to-purple-800 overflow-hidden">
       {/* Top fade from white to purple, make it shorter and more transparent */}
       <div 
-        className="pointer-events-none absolute top-0 left-0 w-full h-5 lg:h-7 z-10"
+        className="pointer-events-none absolute top-0 left-0 w-full h-5 lg:h-7 z-0"
         style={{
-          background: "linear-gradient(to bottom, #fff 0%, rgba(126,34,206,0.08) 60%, rgba(126,34,206,0.0) 100%)"
+          background: "linear-gradient(to bottom, #fff 0%, rgba(126,34,206,0.04) 60%, rgba(126,34,206,0.0) 100%)"
         }}
       />
-      <div className="container mx-auto relative z-20">
+      <div className="container mx-auto relative z-10">
         <div className="text-center reveal">
           <SectionEyebrow>Contact Us</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Contact Us</h2>

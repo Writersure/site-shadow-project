@@ -27,12 +27,12 @@ const CaseStudies = () => {
     <section id="case-studies" className="relative py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-purple-50 to-white overflow-hidden">
       {/* Top fade from white to purple-50 */}
       <div 
-        className="pointer-events-none absolute top-0 left-0 w-full h-8 lg:h-12 z-10"
+        className="pointer-events-none absolute top-0 left-0 w-full h-6 lg:h-8 z-0"
         style={{
-          background: "linear-gradient(to top, rgba(244,241,255,0.0) 0%, #fff 100%)"
+          background: "linear-gradient(to top, rgba(244,241,255,0.00) 0%, #fff 99%)"
         }}
       />
-      <div className="container mx-auto relative z-20">
+      <div className="container mx-auto relative z-10">
         <div className="text-center reveal">
           <SectionEyebrow>Success Stories</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Success Stories</h2>
