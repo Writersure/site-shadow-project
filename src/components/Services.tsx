@@ -1,3 +1,4 @@
+
 import React from "react";
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -38,8 +39,8 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="relative py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-white to-purple-50 overflow-hidden">
-      <div className="container mx-auto relative z-10">
+    <section id="services" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-white to-purple-50">
+      <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Our Services</SectionEyebrow>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Services</h2>
@@ -65,13 +66,6 @@ const Services = () => {
           ))}
         </div>
       </div>
-      {/* Bottom fade into white */}
-      <div 
-        className="pointer-events-none absolute bottom-0 left-0 w-full h-8 lg:h-12 z-0"
-        style={{
-          background: "linear-gradient(to bottom, rgba(244,241,255,0.04) 0%, #fff 100%)"
-        }}
-      />
     </section>
   );
 };
