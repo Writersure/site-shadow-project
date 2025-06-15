@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -69,6 +68,8 @@ const Index = () => {
     ogUrl.setAttribute('content', window.location.href);
     head?.appendChild(ogUrl);
     
+    console.log("Index page loaded");
+    
     return () => {
       cleanupAnimation();
       // Clean up added meta tags
@@ -84,16 +85,23 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div
+      className="flex flex-col min-h-screen"
+      style={{ outline: "5px solid red" }}  // TEMP: helps us see if the main container renders
+    >
       <Navbar />
       <main>
-        <div className="space-y-16 lg:space-y-24">
+        <div
+          className="space-y-16 lg:space-y-24"
+          style={{ background: "rgba(255,255,200,0.3)", outline: "3px dashed green" }} // TEMP: highlight this stack area
+        >
+          {console.log("Main content stack rendering")}
           <Hero />
           <Services />
           <About />
           <HomeAdsPlacement />
           <Process />
-          <Team /> 
+          <Team />
           <CaseStudies />
           <Testimonials />
           <FAQ />
