@@ -43,7 +43,7 @@ const About = () => {
             <span className="bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block">
               About Us
             </span>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
               We're AI content specialists
             </h2>
             <p className="text-gray-600 mb-8">

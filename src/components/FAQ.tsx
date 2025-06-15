@@ -49,7 +49,7 @@ const FAQ = () => {
     <section id="faq" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-purple-700">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">
             Frequently Asked <span className="font-extrabold">Questions</span>
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -90,4 +90,3 @@ const FAQ = () => {
 };
 
 export default FAQ;
-

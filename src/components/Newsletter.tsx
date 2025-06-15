@@ -23,7 +23,7 @@ const Newsletter = () => {
     <section className="py-12 px-4 md:px-8 lg:px-12 bg-gradient-to-r from-primary/90 to-primary">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto text-center text-white reveal">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4 text-primary">Subscribe to Our Newsletter</h2>
           <p className="mb-8 opacity-90">
             Get the latest content tips, industry news, and exclusive offers delivered straight to your inbox.
           </p>

@@ -49,7 +49,7 @@ const Contact = () => {
     <section id="contact" className="py-16 bg-gradient-to-r from-purple-900 to-purple-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 reveal">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Contact <span className="text-amber-400">Us</span></h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary">Contact <span className="text-amber-400">Us</span></h2>
           <p className="text-purple-100 max-w-2xl mx-auto">
             Ready to elevate your digital presence? Reach out to discuss your project and
             discover how our services can help you achieve your goals.
@@ -60,7 +60,7 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
             {/* Contact Information */}
             <div className="bg-purple-800 text-white col-span-5 p-6 lg:p-8 rounded-lg reveal">
-              <h3 className="text-xl font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-xl font-semibold mb-6 text-primary">Contact Information</h3>
               <p className="mb-6">
                 Have questions or ready to start your project? Reach out to us through any 
                 of these channels.
@@ -109,7 +109,7 @@ const Contact = () => {
                 </a>
                 
                 <div className="mt-6">
-                  <h4 className="font-medium mb-4">Follow Us</h4>
+                  <h4 className="font-medium mb-4 text-primary">Follow Us</h4>
                   <div className="flex space-x-3">
                     {socialLinks.map((link, index) => (
                       <a 
@@ -129,7 +129,7 @@ const Contact = () => {
             
             {/* Contact Form */}
             <div className="bg-white p-6 lg:p-8 col-span-7 rounded-lg reveal" style={{transitionDelay: '0.2s'}}>
-              <h3 className="text-xl font-semibold mb-6">Send Us a Message</h3>
+              <h3 className="text-xl font-semibold mb-6 text-primary">Send Us a Message</h3>
               <form onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div className="space-y-2">

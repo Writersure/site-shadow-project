@@ -5,22 +5,22 @@ import { ArrowRight, Check } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section 
+    <section
       id="home"
       className="relative min-h-screen flex flex-col justify-center bg-gradient-to-br from-purple-100 via-purple-50 to-white overflow-hidden"
     >
       <div className="absolute w-96 h-96 bg-purple-600/10 rounded-full -top-20 -left-20 blur-3xl"></div>
       <div className="absolute w-80 h-80 bg-purple-500/10 rounded-full -bottom-20 -right-20 blur-3xl"></div>
-      
+
       <div className="container mx-auto px-6 pt-32 pb-16 md:py-24 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="reveal">
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
-              <span className="text-black">Premium AI-</span>
-              <span className="text-black block">Powered </span>
-              <span className="text-black block">Content</span>
-              <span className="text-black block">Creation </span>
-              <span className="text-black block">& Digital Services</span>
+            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6 text-primary">
+              <span>Premium AI-</span>
+              <span className="block">Powered </span>
+              <span className="block">Content</span>
+              <span className="block">Creation </span>
+              <span className="block">& Digital Services</span>
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-lg">
               Transform your digital presence with expert ghostwriting, content creation, and AI solutions tailored to elevate your brand and drive business growth.
@@ -39,10 +39,10 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          
+
           <div className="reveal bg-white rounded-xl shadow-lg p-6 lg:p-8">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-2xl font-bold text-black">Premium Ghostwriting</h2>
+              <h2 className="text-2xl font-bold text-primary">Premium Ghostwriting</h2>
               <span className="bg-purple-500 text-white px-4 py-1 rounded-full text-sm font-medium">Featured Service</span>
             </div>
             
