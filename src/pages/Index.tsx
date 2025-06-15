@@ -86,18 +86,20 @@ const Index = () => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <main className="space-y-16">
-        <Hero />
-        <Services />
-        <About />
-        <HomeAdsPlacement />
-        <Process />
-        <Team /> 
-        <CaseStudies />
-        <Testimonials />
-        <FAQ />
-        <Contact />
-        <Newsletter />
+      <main>
+        <div className="space-y-16 lg:space-y-24">
+          <Hero />
+          <Services />
+          <About />
+          <HomeAdsPlacement />
+          <Process />
+          <Team /> 
+          <CaseStudies />
+          <Testimonials />
+          <FAQ />
+          <Contact />
+          <Newsletter />
+        </div>
       </main>
       <Footer />
       <ScrollToTop />
