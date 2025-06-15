@@ -13,15 +13,21 @@ const Newsletter = () => {
       title: "Success!",
       description: "You've been subscribed to our newsletter.",
     });
-    
     // Reset the form
     const form = e.target as HTMLFormElement;
     form.reset();
   };
 
   return (
-    <section className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-r from-blue-600 to-blue-500">
-      <div className="container mx-auto">
+    <section className="relative py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-r from-blue-600 to-blue-500 overflow-hidden">
+      {/* Top fade from white to blue-600/500 */}
+      <div 
+        className="pointer-events-none absolute top-0 left-0 w-full h-12 lg:h-16 z-10"
+        style={{
+          background: "linear-gradient(to bottom, #fff 0%, rgba(37,99,235,0.17) 60%, rgba(37,99,235,0.0) 100%)"
+        }}
+      />
+      <div className="container mx-auto relative z-20">
         <div className="max-w-4xl mx-auto text-center text-white reveal">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Subscribe to Our Newsletter</h2>
           <p className="mb-8 opacity-90 text-white">
@@ -48,3 +54,4 @@ const Newsletter = () => {
 };
 
 export default Newsletter;
+
