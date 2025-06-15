@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MessageSquare } from "lucide-react";
@@ -10,7 +11,7 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-4">
-            <Link to="/" className="font-playfair font-bold text-2xl text-primary mb-3 inline-block">WriterSure</Link>
+            <Link to="/" className="font-bold text-2xl text-purple-400 mb-3 inline-block">WriterSure</Link>
             <p className="text-gray-400 mb-4">
               Premium AI-powered content creation and digital services for businesses worldwide.
             </p>
@@ -29,7 +30,7 @@ const Footer = () => {
           </div>
           
           <div className="md:col-span-2">
-            <h3 className="text-lg font-playfair font-bold mb-4 text-primary">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-1">
               <li><Link to="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">AI Content Creation</Link></li>
               <li><Link to="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Premium Ghostwriting</Link></li>
@@ -39,7 +40,7 @@ const Footer = () => {
           </div>
 
           <div className="md:col-span-2">
-            <h3 className="text-lg font-playfair font-bold mb-4 text-primary">Company</h3>
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-1">
               <li><Link to="/#about" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">About Us</Link></li>
               <li><Link to="/#team" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Our Team</Link></li>
@@ -49,7 +50,7 @@ const Footer = () => {
           </div>
           
           <div className="md:col-span-4">
-            <h3 className="text-lg font-playfair font-bold mb-4 text-primary">Connect With Us</h3>
+            <h3 className="text-lg font-semibold mb-4">Connect With Us</h3>
             <div className="flex space-x-4 mb-4">
               <a href="https://x.com/writersure" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-purple-800 transition-colors">
                 {/* Twitter/X Icon (SVG) */}
@@ -80,7 +81,7 @@ const Footer = () => {
                 href="https://calendly.com/writersure369/30min" 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="cta-btn block text-center"
+                className="bg-purple-700 text-white py-2 px-4 rounded text-sm hover:bg-purple-800 transition-colors inline-block"
               >
                 Book a Call
               </a>
