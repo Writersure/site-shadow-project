@@ -63,25 +63,49 @@ const caseStudiesData = [
 const CaseStudyDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [caseStudy, setCaseStudy] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
   
   useEffect(() => {
+    console.log('Case Study ID from URL:', id);
+    console.log('Available case studies:', caseStudiesData.map(s => ({ id: s.id, title: s.title })));
+    
     // Find the case study by ID
     const study = caseStudiesData.find(study => study.id === id);
+    console.log('Found case study:', study);
     
     if (study) {
       setCaseStudy(study);
+      document.title = `${study.title} | Alex Content Case Study`;
+    } else {
+      console.error('Case study not found for ID:', id);
+      document.title = 'Case Study Not Found | Alex Content';
     }
+    
+    setLoading(false);
     
     // Initialize scroll animations
     const cleanupAnimation = initAnimateOnScroll();
-    
-    // Set page title
-    document.title = study ? `${study.title} | Alex Content Case Study` : 'Case Study | Alex Content';
     
     return () => {
       cleanupAnimation();
     };
   }, [id]);
+
+  if (loading) {
+    return (
+      <div className="flex flex-col min-h-screen">
+        <Navbar />
+        <main className="flex-grow py-16 px-4 md:px-8 lg:px-12">
+          <div className="container mx-auto max-w-4xl">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-5xl font-bold mb-8 text-black">Loading...</h1>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   if (!caseStudy) {
     return (
@@ -90,7 +114,8 @@ const CaseStudyDetail = () => {
         <main className="flex-grow py-16 px-4 md:px-8 lg:px-12">
           <div className="container mx-auto max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-8 text-black">Case Study Not Found</h1>
-            <p className="text-gray-600">Sorry, we couldn't find the case study you're looking for.</p>
+            <p className="text-gray-600 mb-4">Sorry, we couldn't find the case study you're looking for.</p>
+            <p className="text-gray-500 mb-8">Case Study ID: {id}</p>
             <Link to="/case-studies" className="text-purple-600 font-medium hover:underline mt-4 inline-flex items-center">
               <ArrowLeftIcon size={16} className="mr-2" /> Back to All Case Studies
             </Link>
@@ -124,7 +149,11 @@ const CaseStudyDetail = () => {
                 <img 
                   src={caseStudy.image} 
                   alt={caseStudy.title} 
-                  className="w-full h-auto object-cover"
+                  className="w-full h-64 md:h-96 object-cover"
+                  onError={(e) => {
+                    console.error('Image failed to load:', caseStudy.image);
+                    e.currentTarget.src = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80';
+                  }}
                 />
               </div>
               
