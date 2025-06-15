@@ -39,12 +39,12 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-6">
           <div className="flex space-x-5">
-            <a href="/#home" className="font-medium hover:text-purple-800 transition-colors">Home</a>
-            <a href="/#services" className="font-medium hover:text-purple-800 transition-colors">Services</a>
-            <a href="/#about" className="font-medium hover:text-purple-800 transition-colors">About</a>
-            <a href="/#team" className="font-medium hover:text-purple-800 transition-colors">Team</a>
+            <Link to="/#home" className="font-medium hover:text-purple-800 transition-colors">Home</Link>
+            <Link to="/#services" className="font-medium hover:text-purple-800 transition-colors">Services</Link>
+            <Link to="/#about" className="font-medium hover:text-purple-800 transition-colors">About</Link>
+            <Link to="/#team" className="font-medium hover:text-purple-800 transition-colors">Team</Link>
             <Link to="/case-studies" className="font-medium hover:text-purple-800 transition-colors">Success Stories</Link>
-            <a href="/#contact" className="font-medium hover:text-purple-800 transition-colors">Contact Us</a>
+            <Link to="/#contact" className="font-medium hover:text-purple-800 transition-colors">Contact Us</Link>
           </div>
 
           <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer">
@@ -71,12 +71,12 @@ const Navbar = () => {
         }`}
       >
         <div className="container mx-auto px-6 py-4 space-y-4">
-          <a href="/#home" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Home</a>
-          <a href="/#services" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Services</a>
-          <a href="/#about" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>About</a>
-          <a href="/#team" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Team</a>
+          <Link to="/#home" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Home</Link>
+          <Link to="/#services" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Services</Link>
+          <Link to="/#about" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>About</Link>
+          <Link to="/#team" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Team</Link>
           <Link to="/case-studies" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Success Stories</Link>
-          <a href="/#contact" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Contact Us</a>
+          <Link to="/#contact" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Contact Us</Link>
           <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu}>
             <Button className="w-full bg-purple-800 hover:bg-purple-900">Get Started</Button>
           </a>

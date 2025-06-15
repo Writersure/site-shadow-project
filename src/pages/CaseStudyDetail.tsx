@@ -128,9 +128,9 @@ const CaseStudyDetail = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-50 to-white">
       <Navbar />
-      <main className="flex-grow pt-28 pb-16 px-4 md:px-8 lg:px-12">
+      <main className="flex-grow pt-24 pb-16 px-4 md:px-8 lg:px-12">
         <div className="container mx-auto max-w-7xl">
-          <div className="mb-8 reveal">
+          <div className="mb-8">
             <Link to="/case-studies" className="text-purple-600 font-medium hover:underline inline-flex items-center mb-6">
               <ArrowLeftIcon size={16} className="mr-2" /> Back to All Case Studies
             </Link>
@@ -138,12 +138,7 @@ const CaseStudyDetail = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Main Content */}
-            <section
-              className="lg:col-span-3 bg-white border-4 border-dashed border-red-500 p-8 rounded-xl"
-              // className="lg:col-span-3"
-            >
-              <div style={{marginBottom:'20px', color:'red', fontWeight:'bold'}}>DEBUG: Main case study section should show</div>
-
+            <section className="lg:col-span-3 bg-white p-8 rounded-xl shadow-md">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">{caseStudy.title}</h1>
                 <p className="text-xl text-purple-600 font-medium">Client: {caseStudy.client}</p>
@@ -152,10 +147,9 @@ const CaseStudyDetail = () => {
               <div className="mb-12 rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src={caseStudy.image} 
-                  alt={caseStudy.title} 
+                  alt={caseStudy.title}
                   className="w-full h-64 md:h-96 object-cover"
                   onError={(e) => {
-                    console.error('Image failed to load:', caseStudy.image);
                     e.currentTarget.src = 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80';
                   }}
                 />
@@ -216,8 +210,8 @@ const CaseStudyDetail = () => {
             
             {/* Project Details Sidebar */}
             <div className="lg:col-span-1">
-              <div className="sticky top-32">
-                <Card className="border-none shadow-lg reveal">
+              <div className="sticky top-28">
+                <Card className="border-none shadow-lg">
                   <CardContent className="p-6">
                     <h3 className="text-xl font-bold mb-6 text-black">Project Details</h3>
                     
@@ -265,12 +259,12 @@ const CaseStudyDetail = () => {
                     </div>
                     
                     <div className="mt-8 pt-6 border-t border-gray-200">
-                      <a 
-                        href="/#contact" 
+                      <Link 
+                        to="/#contact"
                         className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-4 rounded-lg transition-colors inline-block text-center"
                       >
                         Discuss Your Project
-                      </a>
+                      </Link>
                     </div>
                   </CardContent>
                 </Card>

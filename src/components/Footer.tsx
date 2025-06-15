@@ -5,9 +5,9 @@ import { Mail, Phone, MessageSquare } from "lucide-react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
-  
+
   return (
-    <footer className="bg-gray-900 text-white py-8">
+    <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-4">
@@ -32,20 +32,20 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-2">Services</h3>
             <ul className="space-y-1">
-              <li><a href="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">AI Content Creation</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Premium Ghostwriting</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Chatbot Development</a></li>
-              <li><a href="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Email Marketing</a></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">AI Content Creation</Link></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Premium Ghostwriting</Link></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Chatbot Development</Link></li>
+              <li><Link to="/#services" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Email Marketing</Link></li>
             </ul>
           </div>
-          
+
           <div className="md:col-span-2">
             <h3 className="text-lg font-semibold mb-2">Company</h3>
             <ul className="space-y-1">
-              <li><a href="/#about" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">About Us</a></li>
-              <li><a href="/#team" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Our Team</a></li>
+              <li><Link to="/#about" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">About Us</Link></li>
+              <li><Link to="/#team" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Our Team</Link></li>
               <li><Link to="/case-studies" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Success Stories</Link></li>
-              <li><a href="/#testimonials" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Testimonials</a></li>
+              <li><Link to="/#testimonials" className="text-gray-400 hover:text-purple-400 transition-colors text-sm">Testimonials</Link></li>
             </ul>
           </div>
           
@@ -53,11 +53,13 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-2">Connect With Us</h3>
             <div className="flex space-x-4 mb-4">
               <a href="https://x.com/writersure" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-purple-800 transition-colors">
+                {/* Twitter/X Icon (SVG) */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-twitter">
                   <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
                 </svg>
               </a>
               <a href="https://www.instagram.com/writersure/" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-purple-800 transition-colors">
+                {/* Instagram Icon (SVG) */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-instagram">
                   <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                   <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
@@ -65,6 +67,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a href="https://www.threads.com/@writersure" target="_blank" rel="noopener noreferrer" className="bg-gray-800 p-2 rounded-full hover:bg-purple-800 transition-colors">
+                {/* Threads Icon (SVG) */}
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M19 7.5c-1.333-3-3.667-4.5-7-4.5-5 0-8 2.5-8 9s3.5 9 8 9c1.5 0 3.5-.5 5-2" />
                   <path d="M12 7v10" />
@@ -86,14 +89,14 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-gray-800 mt-5 pt-5">
+        <div className="border-t border-gray-800 mt-8 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {year} WriterSure. All rights reserved.
             </p>
             <div className="flex space-x-4 mt-2 md:mt-0">
-              <a href="#" className="text-gray-400 text-sm hover:text-purple-400 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-400 text-sm hover:text-purple-400 transition-colors">Terms of Service</a>
+              <Link to="#" className="text-gray-400 text-sm hover:text-purple-400 transition-colors">Privacy Policy</Link>
+              <Link to="#" className="text-gray-400 text-sm hover:text-purple-400 transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>

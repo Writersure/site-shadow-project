@@ -24,9 +24,9 @@ const caseStudies = [
 
 const CaseStudies = () => {
   return (
-    <section id="case-studies" className="py-16 px-4 md:py-24 md:px-8 lg:px-12 bg-gradient-to-br from-purple-50 to-white">
+    <section id="case-studies" className="py-20 px-4 md:py-24 md:px-8 lg:px-12 bg-gradient-to-br from-purple-50 to-white">
       <div className="container mx-auto">
-        <div className="text-center mb-16 reveal">
+        <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Success Stories</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             See how we've helped businesses across industries transform their content and achieve remarkable results.
@@ -35,7 +35,7 @@ const CaseStudies = () => {
         
         <div className="grid gap-8 md:grid-cols-3">
           {caseStudies.map((study, index) => (
-            <div key={study.id} className={`staggered-item hover-card`} style={{ transitionDelay: `${index * 150}ms` }}>
+            <div key={study.id} className="hover-card">
               <Link to={`/case-study/${study.id}`} className="block bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 h-full hover:shadow-xl">
                 <div className="h-48 bg-gray-200 overflow-hidden">
                   <img 
@@ -55,7 +55,7 @@ const CaseStudies = () => {
           ))}
         </div>
         
-        <div className="text-center mt-16 reveal">
+        <div className="text-center mt-16">
           <Link to="/case-studies" className="inline-block px-8 py-3 bg-purple-600 text-white font-medium rounded-full hover:bg-purple-700 transition-colors">
             View All Success Stories
           </Link>
@@ -66,3 +66,4 @@ const CaseStudies = () => {
 };
 
 export default CaseStudies;
+

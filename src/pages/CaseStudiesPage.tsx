@@ -87,9 +87,9 @@ const CaseStudiesPage = () => {
   return (
     <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-50 to-white">
       <Navbar />
-      <main className="flex-grow pt-28 pb-16 px-4 md:px-8 lg:px-12">
+      <main className="flex-grow pt-24 pb-16 px-4 md:px-8 lg:px-12">
         <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center mb-16 reveal">
+          <div className="max-w-4xl mx-auto text-center mb-16">
             <span className="bg-purple-600/10 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4 inline-block">
               Success Stories
             </span>
@@ -101,7 +101,7 @@ const CaseStudiesPage = () => {
           
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {caseStudies.map((study, index) => (
-              <div key={study.id} className="case-study-card reveal" style={{ transitionDelay: `${index * 100}ms` }}>
+              <div key={study.id} className="case-study-card" style={{ transitionDelay: `${index * 100}ms` }}>
                 <Link to={`/case-study/${study.id}`}>
                   <Card className="hover-card border-none shadow-lg overflow-hidden h-full transition-all duration-300 hover:shadow-xl">
                     <div className="h-48 overflow-hidden">
@@ -145,16 +145,16 @@ const CaseStudiesPage = () => {
             ))}
           </div>
           
-          <div className="text-center mt-16 reveal">
+          <div className="text-center mt-16">
             <p className="text-xl mb-8 text-gray-600">
               Ready to see similar results for your business?
             </p>
-            <a 
-              href="/#contact" 
+            <Link 
+              to="/#contact"
               className="inline-block px-8 py-4 bg-purple-600 text-white font-medium rounded-lg hover:bg-purple-700 transition-colors text-lg"
             >
               Start Your Success Story
-            </a>
+            </Link>
           </div>
         </div>
       </main>
