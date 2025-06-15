@@ -25,7 +25,7 @@ const caseStudies = [
 
 const CaseStudies = () => {
   return (
-    <section id="case-studies" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-blue-200 to-blue-400">
+    <section id="case-studies" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-br from-purple-50 to-white">
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Success Stories</SectionEyebrow>
