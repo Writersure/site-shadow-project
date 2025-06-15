@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from '@/components/Navbar';
@@ -138,7 +139,7 @@ const CaseStudyDetail = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Main Content */}
-            <section className="lg:col-span-3 bg-white p-8 rounded-xl shadow-md">
+            <section className="lg:col-span-3 bg-white p-10 rounded-xl shadow-md">
               <div>
                 <h1 className="text-4xl md:text-5xl font-bold mb-4 text-black">{caseStudy.title}</h1>
                 <p className="text-xl text-purple-600 font-medium">Client: {caseStudy.client}</p>

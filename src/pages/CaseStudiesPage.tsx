@@ -95,7 +95,7 @@ const CaseStudiesPage = () => {
             </span>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-black">Our Case Studies</h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Explore our detailed case studies to see how we've helped businesses transform their digital presence and achieve remarkable results through strategic content and marketing solutions.
+              Explore our detailed case studies to see how WriterSure helped businesses transform their digital presence and achieve remarkable results through strategic content and marketing solutions.
             </p>
           </div>
           
