@@ -1,49 +1,34 @@
 
 import React from "react";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Bot, Users, FileText, MessageSquare, PenTool } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionEyebrow from "./SectionEyebrow";
 
 const services = [
   {
-    icon: "🪄",
-    title: "AI Content Creation",
-    desc: "Blog posts, articles, social media & more powered by advanced AI + human expertise."
+    icon: PenTool,
+    title: "AI-Powered Content Creation",
+    desc: "Blog posts, articles, website copy, and marketing materials powered by AI with human expertise."
   },
   {
-    icon: "✍️",
-    title: "Premium Ghostwriting",
-    desc: "Books, eBooks, client stories, case studies with a human touch."
+    icon: FileText,
+    title: "Professional Writing Services",
+    desc: "Ghostwriting, technical documentation, white papers, and authoritative thought leadership content."
   },
   {
-    icon: "🤵",
-    title: "Virtual Assistant",
-    desc: "Professional administrative support, scheduling, research, and task management services."
+    icon: Users,
+    title: "Virtual Assistant Services",
+    desc: "Administrative support, research, scheduling, and comprehensive business task management."
   },
   {
-    icon: "🤖",
-    title: "Custom Chatbots",
-    desc: "Conversational AI solutions for client interaction, lead gen, support, and automation."
+    icon: Bot,
+    title: "Custom AI Solutions",
+    desc: "Conversational chatbots, automation tools, and AI-powered business solutions."
   },
   {
-    icon: "📱",
-    title: "Social Media Marketing",
-    desc: "Strategic content creation, posting schedules, and engagement campaigns across platforms."
-  },
-  {
-    icon: "🛠️",
-    title: "Technical Writing",
-    desc: "Documentation, user guides, and detailed process manuals."
-  },
-  {
-    icon: "✏️",
-    title: "Content Writing",
-    desc: "Professional copywriting for websites, marketing materials, and brand communications."
-  },
-  {
-    icon: "📄",
-    title: "White Papers",
-    desc: "In-depth research documents, industry reports, and authoritative thought leadership content."
+    icon: MessageSquare,
+    title: "Digital Marketing",
+    desc: "Social media marketing, content strategy, and multi-platform engagement campaigns."
   }
 ];
 
@@ -58,22 +43,27 @@ const Services = () => {
             Unlock a suite of premium content & digital solutions tailored for your business.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {services.map((service, idx) => (
-            <div
-              key={idx}
-              className="bg-white hover-card rounded-xl shadow-md transition-all duration-300 overflow-hidden h-full"
-            >
-              <div className="px-6 py-8">
-                <div className="text-5xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-bold mb-2 text-primary">{service.title}</h3>
-                <p className="text-gray-600 mb-6">{service.desc}</p>
-                <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-purple-100" asChild>
-                  <a href="#contact">Get Started</a>
-                </Button>
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, idx) => {
+            const IconComponent = service.icon;
+            return (
+              <div
+                key={idx}
+                className="bg-white hover-card rounded-xl shadow-md transition-all duration-300 overflow-hidden h-full"
+              >
+                <div className="px-6 py-8">
+                  <div className="mb-4 text-primary">
+                    <IconComponent size={48} />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2 text-primary">{service.title}</h3>
+                  <p className="text-gray-600 mb-6">{service.desc}</p>
+                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-purple-100" asChild>
+                    <a href="#contact">Get Started</a>
+                  </Button>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
