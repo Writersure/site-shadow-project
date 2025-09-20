@@ -16,9 +16,9 @@ const services = [
     desc: "Books, eBooks, client stories, case studies with a human touch."
   },
   {
-    icon: "📈",
-    title: "SEO Optimization",
-    desc: "Get discovered with SEO-powered website content & copy."
+    icon: "🤵",
+    title: "Virtual Assistant",
+    desc: "Professional administrative support, scheduling, research, and task management services."
   },
   {
     icon: "🤖",
@@ -26,14 +26,24 @@ const services = [
     desc: "Conversational AI solutions for client interaction, lead gen, support, and automation."
   },
   {
-    icon: "📧",
-    title: "Email Marketing",
-    desc: "Full campaign creation: email copy, automation & list growth."
+    icon: "📱",
+    title: "Social Media Marketing",
+    desc: "Strategic content creation, posting schedules, and engagement campaigns across platforms."
   },
   {
     icon: "🛠️",
     title: "Technical Writing",
-    desc: "Documentation, whitepapers & detailed process guides."
+    desc: "Documentation, user guides, and detailed process manuals."
+  },
+  {
+    icon: "✏️",
+    title: "Content Writing",
+    desc: "Professional copywriting for websites, marketing materials, and brand communications."
+  },
+  {
+    icon: "📄",
+    title: "White Papers",
+    desc: "In-depth research documents, industry reports, and authoritative thought leadership content."
   }
 ];
 
@@ -48,7 +58,7 @@ const Services = () => {
             Unlock a suite of premium content & digital solutions tailored for your business.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, idx) => (
             <div
               key={idx}
