@@ -11,7 +11,6 @@ import Contact from "@/components/Contact";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import CaseStudies from "@/components/CaseStudies";
 import HomeAdsPlacement from "@/components/HomeAdsPlacement";
 import { initAnimateOnScroll } from "@/utils/animateOnScroll";
 
@@ -95,7 +94,6 @@ const Index = () => {
           <HomeAdsPlacement />
           <Process />
           <Team />
-          <CaseStudies />
           <Testimonials />
           <FAQ />
           <Contact />
