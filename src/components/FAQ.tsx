@@ -10,39 +10,44 @@ import SectionEyebrow from "./SectionEyebrow";
 
 const faqData = [
   {
-    question: "What types of content do you create?",
+    question: "What services does WriterSure offer?",
     answer:
-      "We specialize in AI-powered content creation, premium ghostwriting, technical writing, email marketing, and chatbot development. Our services cover blog posts, articles, website content, eBooks, and more.",
+      "WriterSure provides a comprehensive range of AI-powered content and digital services including premium ghostwriting, virtual assistance, email marketing, chatbot automation, coding services, technical writing, freelance writing, website design, AI generalist solutions, and social media marketing.",
   },
   {
-    question: "How does AI enhance your content creation process?",
+    question: "How does your AI-powered content creation process work?",
     answer:
-      "AI helps us generate ideas, conduct research, and create initial drafts quickly. Our human experts then refine and optimize the content to ensure it meets your specific needs and maintains a high level of quality.",
+      "Our process combines advanced AI technology with human expertise. We start by understanding your requirements, brand voice, and goals. Then, we leverage AI to generate initial content drafts, which are thoroughly reviewed, edited, and refined by our expert team to ensure quality, accuracy, and alignment with your brand.",
   },
   {
-    question: "Can you match my brand's voice and style?",
+    question: "Do you offer customized solutions for specific industries?",
     answer:
-      "Yes, we work closely with you to understand your brand's voice, style, and target audience. Our team ensures that all content aligns with your brand guidelines and resonates with your audience.",
+      "Yes, we specialize in creating tailored solutions for various industries including technology, healthcare, finance, education, e-commerce, and more. We understand the unique challenges and requirements of different sectors and customize our services accordingly.",
   },
   {
-    question: "What is the turnaround time for a project?",
+    question: "How do you ensure the quality and originality of content?",
     answer:
-      "Turnaround time varies depending on the scope and complexity of the project. We provide estimated timelines during the initial consultation and keep you updated throughout the process.",
+      "We have a rigorous quality assurance process that includes multiple rounds of editing, fact-checking, plagiarism detection, and final review by industry specialists. This ensures that all content is original, accurate, and meets the highest quality standards.",
   },
   {
-    question: "How do you ensure the content is SEO-friendly?",
+    question: "What is the typical turnaround time for your services?",
     answer:
-      "Our content is optimized for search engines using the latest SEO best practices. We conduct keyword research, optimize meta descriptions, and ensure the content is structured for readability and engagement.",
+      "Turnaround times vary depending on the complexity and scope of the project. For standard content projects, we typically deliver within 3-5 business days. For more complex projects like website design or comprehensive marketing campaigns, we provide a detailed timeline during the consultation phase.",
   },
   {
-    question: "What if I need revisions to the content?",
+    question: "Do you offer ongoing support after project completion?",
     answer:
-      "We offer revisions to ensure you are completely satisfied with the final product. Our team is committed to making any necessary changes to meet your expectations.",
+      "Yes, we provide ongoing support and maintenance for all our services. We believe in building long-term relationships with our clients and ensuring the continued success of every project. Our support packages can be customized based on your specific needs.",
   },
   {
-    question: "How much do your services cost?",
+    question: "How do you price your services?",
     answer:
-      "Pricing varies based on the type and scope of the project. We offer customized quotes based on your specific requirements. Contact us for a free consultation and detailed pricing information.",
+      "Our pricing is based on the scope, complexity, and requirements of each project. We offer flexible pricing models including project-based, retainer, and subscription options. During the initial consultation, we'll discuss your needs and provide a transparent quote tailored to your specific requirements.",
+  },
+  {
+    question: "Can you help with implementing AI solutions into my existing business processes?",
+    answer:
+      "Absolutely! Our AI generalist solutions are designed to integrate seamlessly with your existing business processes. We assess your current workflows, identify opportunities for AI implementation, and develop custom solutions that enhance efficiency and drive better results.",
   },
 ];
 
