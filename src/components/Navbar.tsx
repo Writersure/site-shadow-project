@@ -43,7 +43,6 @@ const Navbar = () => {
             <Link to="/#services" className="font-medium hover:text-purple-800 transition-colors">Services</Link>
             <Link to="/#about" className="font-medium hover:text-purple-800 transition-colors">About</Link>
             <Link to="/#team" className="font-medium hover:text-purple-800 transition-colors">Team</Link>
-            <Link to="/case-studies" className="font-medium hover:text-purple-800 transition-colors">Success Stories</Link>
             <Link to="/#contact" className="font-medium hover:text-purple-800 transition-colors">Contact Us</Link>
           </div>
 
@@ -75,7 +74,6 @@ const Navbar = () => {
           <Link to="/#services" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Services</Link>
           <Link to="/#about" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>About</Link>
           <Link to="/#team" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Team</Link>
-          <Link to="/case-studies" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Success Stories</Link>
           <Link to="/#contact" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Contact Us</Link>
           <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu}>
             <Button className="w-full bg-purple-800 hover:bg-purple-900">Get Started</Button>

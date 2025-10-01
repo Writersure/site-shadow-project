@@ -20,14 +20,14 @@ const Index = () => {
     const cleanupAnimation = initAnimateOnScroll();
     
     // Update page metadata for SEO
-    document.title = "Alex Content | Premium AI-Powered Content Creation & Digital Services";
+    document.title = "WriterSure | Premium AI-Powered Content Creation & Digital Services";
     
     // Set meta description for SEO
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute(
         "content", 
-        "Transform your digital presence with Alex's premium AI-powered content creation, ghostwriting, technical writing, and digital services. Expert solutions for businesses worldwide."
+        "Transform your digital presence with WriterSure's premium AI-powered content creation, ghostwriting, technical writing, and digital services. Expert solutions for businesses worldwide."
       );
     }
     
@@ -49,12 +49,12 @@ const Index = () => {
     // Add social media meta tags
     const ogTitle = document.createElement('meta');
     ogTitle.setAttribute('property', 'og:title');
-    ogTitle.setAttribute('content', 'Alex Content | Premium AI-Powered Content Creation & Digital Services');
+    ogTitle.setAttribute('content', 'WriterSure | Premium AI-Powered Content Creation & Digital Services');
     head?.appendChild(ogTitle);
     
     const ogDescription = document.createElement('meta');
     ogDescription.setAttribute('property', 'og:description');
-    ogDescription.setAttribute('content', 'Transform your digital presence with Alex\'s premium AI-powered content creation and digital services.');
+    ogDescription.setAttribute('content', 'Transform your digital presence with WriterSure\'s premium AI-powered content creation and digital services.');
     head?.appendChild(ogDescription);
     
     const ogType = document.createElement('meta');
