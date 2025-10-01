@@ -6,8 +6,6 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
-import CaseStudiesPage from "./pages/CaseStudiesPage";
-import CaseStudyDetail from "./pages/CaseStudyDetail";
 
 // Create a new window.d.ts type definition to avoid TypeScript errors with adsbygoogle
 
@@ -35,8 +33,6 @@ const App = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/case-studies" element={<CaseStudiesPage />} />
-            <Route path="/case-study/:id" element={<CaseStudyDetail />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
