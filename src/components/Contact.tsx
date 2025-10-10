@@ -69,7 +69,7 @@ const Contact = () => {
               </p>
               
               <div className="space-y-6">
-                <div className="flex space-x-4 items-start">
+                <a href="mailto:writersure@outlook.com" className="flex space-x-4 items-start hover:opacity-80 transition-opacity">
                   <div className="bg-white/20 p-3 rounded-lg">
                     <Mail size={24} className="text-white" />
                   </div>
@@ -77,9 +77,9 @@ const Contact = () => {
                     <h4 className="font-medium">Email Us</h4>
                     <p className="text-white/80">writersure@outlook.com</p>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex space-x-4 items-start">
+                <a href="tel:+918297297307" className="flex space-x-4 items-start hover:opacity-80 transition-opacity">
                   <div className="bg-white/20 p-3 rounded-lg">
                     <Phone size={24} className="text-white" />
                   </div>
@@ -87,9 +87,9 @@ const Contact = () => {
                     <h4 className="font-medium">Call Us</h4>
                     <p className="text-white/80">+91 8297297307</p>
                   </div>
-                </div>
+                </a>
                 
-                <div className="flex space-x-4 items-start">
+                <a href="https://wa.me/918297297307" target="_blank" rel="noopener noreferrer" className="flex space-x-4 items-start hover:opacity-80 transition-opacity">
                   <div className="bg-white/20 p-3 rounded-lg">
                     <MessageSquare size={24} className="text-white" />
                   </div>
@@ -97,7 +97,7 @@ const Contact = () => {
                     <h4 className="font-medium">WhatsApp</h4>
                     <p className="text-white/80">+91 8297297307</p>
                   </div>
-                </div>
+                </a>
               </div>
               
               <div className="mt-8 pt-6 border-t border-white/20">
