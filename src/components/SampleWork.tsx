@@ -40,9 +40,9 @@ const SampleWork = () => {
     <section className="py-20 px-6 bg-gradient-to-b from-background to-secondary/10">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16 animate-fade-in">
-          <SectionEyebrow>Sample Work</SectionEyebrow>
+          <SectionEyebrow>Sample Portfolio</SectionEyebrow>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-purple-600 to-primary bg-clip-text text-transparent">
-            Published Articles & White Papers
+            Professional Writing Samples
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Explore professionally crafted content across blockchain, cybersecurity, AI, and finance
