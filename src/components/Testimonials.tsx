@@ -6,9 +6,9 @@ import SectionEyebrow from "./SectionEyebrow";
 const testimonials = [
   {
     quote: "I've had the pleasure of working with Alex on several of my complex startups, and I am consistently impressed by his professionalism and skill. His editing and ghostwriting are so helpful, but what truly sets him apart is his collaborative approach. He listens attentively, provides thoughtful feedback, and always strives to elevate people and the work they do. Alex's empathy and communication skills made launches seamless and enjoyable. I wholeheartedly recommend him.",
-    author: "Alyze Sam",
-    position: "Survivor, Serial Co-Founder, Multi Award-Winning Author, Serving the Blockchain Community",
-    image: "/lovable-uploads/903bb97c-5fd0-443f-b00b-b1bf7c84ec0f.png"
+    author: "Anonymous Client",
+    position: "Serial Co-Founder, Multi Award-Winning Author",
+    image: ""
   }
 ];
 
@@ -34,8 +34,8 @@ const Testimonials = () => {
               </div>
               <p className="text-gray-700 mb-6 italic text-lg leading-relaxed">"{testimonials[0].quote}"</p>
               <div className="flex items-center">
-                <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
-                  <img src={testimonials[0].image} alt={testimonials[0].author} className="w-full h-full object-cover" />
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                  <span className="text-2xl text-primary">👤</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-lg text-primary">{testimonials[0].author}</h4>
