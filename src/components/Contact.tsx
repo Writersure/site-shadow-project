@@ -79,23 +79,23 @@ const Contact = () => {
                   </div>
                 </a>
                 
-                <a href="tel:+918297297307" className="flex space-x-4 items-start hover:opacity-80 transition-opacity">
+                <a href="tel:+919603917537" className="flex space-x-4 items-start hover:opacity-80 transition-opacity">
                   <div className="bg-white/20 p-3 rounded-lg">
                     <Phone size={24} className="text-white" />
                   </div>
                   <div>
                     <h4 className="font-medium">Call Us</h4>
-                    <p className="text-white/80">+91 8297297307</p>
+                    <p className="text-white/80">+91 9603917537</p>
                   </div>
                 </a>
                 
-                <a href="https://wa.me/918297297307" target="_blank" rel="noopener noreferrer" className="flex space-x-4 items-start hover:opacity-80 transition-opacity">
+                <a href="https://wa.me/919603917537" target="_blank" rel="noopener noreferrer" className="flex space-x-4 items-start hover:opacity-80 transition-opacity">
                   <div className="bg-white/20 p-3 rounded-lg">
                     <MessageSquare size={24} className="text-white" />
                   </div>
                   <div>
                     <h4 className="font-medium">WhatsApp</h4>
-                    <p className="text-white/80">+91 8297297307</p>
+                    <p className="text-white/80">+91 9603917537</p>
                   </div>
                 </a>
               </div>
