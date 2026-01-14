@@ -1,6 +1,6 @@
 
 import React from "react";
-import { CheckCircle, Bot, Users, FileText, MessageSquare, PenTool } from "lucide-react";
+import { CheckCircle, Bot, Users, FileText, MessageSquare, PenTool, Facebook, ShoppingBag, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionEyebrow from "./SectionEyebrow";
 
@@ -29,6 +29,21 @@ const services = [
     icon: MessageSquare,
     title: "Digital Marketing",
     desc: "Social media marketing, content strategy, and multi-platform engagement campaigns."
+  },
+  {
+    icon: Facebook,
+    title: "Facebook Ads Management",
+    desc: "Strategic Facebook advertising campaigns, audience targeting, and performance optimization for maximum ROI."
+  },
+  {
+    icon: ShoppingBag,
+    title: "Shopify Website Services",
+    desc: "Complete Shopify store creation, customization, product management, and ongoing store optimization."
+  },
+  {
+    icon: Globe,
+    title: "Website Development & Management",
+    desc: "Custom website design, development, maintenance, and updates to keep your online presence running smoothly."
   }
 ];
 
