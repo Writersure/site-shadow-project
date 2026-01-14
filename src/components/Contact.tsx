@@ -1,13 +1,39 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MessageSquare } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import SectionEyebrow from "./SectionEyebrow";
+import { z } from "zod";
+
+// Validation schema
+const contactSchema = z.object({
+  name: z.string()
+    .trim()
+    .min(1, "Name is required")
+    .max(100, "Name must be less than 100 characters")
+    .regex(/^[a-zA-Z\s'-]+$/, "Name can only contain letters, spaces, hyphens, and apostrophes"),
+  email: z.string()
+    .trim()
+    .min(1, "Email is required")
+    .email("Please enter a valid email address")
+    .max(255, "Email must be less than 255 characters"),
+  company: z.string()
+    .trim()
+    .max(100, "Company name must be less than 100 characters")
+    .optional()
+    .or(z.literal("")),
+  service: z.string().optional().or(z.literal("")),
+  message: z.string()
+    .trim()
+    .min(1, "Message is required")
+    .max(2000, "Message must be less than 2000 characters")
+});
+
+type ContactFormData = z.infer<typeof contactSchema>;
 
 const socialLinks = [
   {
@@ -37,13 +63,60 @@ const socialLinks = [
 
 const Contact = () => {
   const { toast } = useToast();
+  const [formData, setFormData] = useState<ContactFormData>({
+    name: "",
+    email: "",
+    company: "",
+    service: "",
+    message: ""
+  });
+  const [errors, setErrors] = useState<Partial<Record<keyof ContactFormData, string>>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+    // Clear error when user starts typing
+    if (errors[id as keyof ContactFormData]) {
+      setErrors(prev => ({ ...prev, [id]: undefined }));
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setErrors({});
+
+    // Validate form data
+    const result = contactSchema.safeParse(formData);
+    
+    if (!result.success) {
+      const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
+      result.error.errors.forEach((err) => {
+        const field = err.path[0] as keyof ContactFormData;
+        if (!fieldErrors[field]) {
+          fieldErrors[field] = err.message;
+        }
+      });
+      setErrors(fieldErrors);
+      setIsSubmitting(false);
+      toast({
+        title: "Validation Error",
+        description: "Please check the form for errors.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Form is valid - show success (backend integration would go here)
     toast({
       title: "Message sent!",
       description: "We'll get back to you as soon as possible.",
     });
+    
+    // Reset form
+    setFormData({ name: "", email: "", company: "", service: "", message: "" });
+    setIsSubmitting(false);
   };
 
   return (
@@ -132,39 +205,103 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="bg-white p-6 lg:p-8 col-span-7 rounded-lg reveal" style={{transitionDelay: '0.2s'}}>
               <h3 className="text-xl font-semibold mb-6 text-primary">Send Us a Message</h3>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit} noValidate>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div className="space-y-2">
                     <Label htmlFor="name">Your Name</Label>
-                    <Input id="name" placeholder="John Doe" required />
+                    <Input 
+                      id="name" 
+                      placeholder="John Doe" 
+                      value={formData.name}
+                      onChange={handleChange}
+                      maxLength={100}
+                      className={errors.name ? "border-red-500" : ""}
+                      aria-invalid={!!errors.name}
+                      aria-describedby={errors.name ? "name-error" : undefined}
+                    />
+                    {errors.name && (
+                      <p id="name-error" className="text-red-500 text-sm">{errors.name}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="email">Email Address</Label>
-                    <Input id="email" type="email" placeholder="john@example.com" required />
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="john@example.com" 
+                      value={formData.email}
+                      onChange={handleChange}
+                      maxLength={255}
+                      className={errors.email ? "border-red-500" : ""}
+                      aria-invalid={!!errors.email}
+                      aria-describedby={errors.email ? "email-error" : undefined}
+                    />
+                    {errors.email && (
+                      <p id="email-error" className="text-red-500 text-sm">{errors.email}</p>
+                    )}
                   </div>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                   <div className="space-y-2">
                     <Label htmlFor="company">Company Name</Label>
-                    <Input id="company" placeholder="Your Company" />
+                    <Input 
+                      id="company" 
+                      placeholder="Your Company" 
+                      value={formData.company}
+                      onChange={handleChange}
+                      maxLength={100}
+                      className={errors.company ? "border-red-500" : ""}
+                    />
+                    {errors.company && (
+                      <p className="text-red-500 text-sm">{errors.company}</p>
+                    )}
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="service">Service You're Interested In</Label>
-                    <select id="service" className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2">
+                    <select 
+                      id="service" 
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    >
                       <option value="">Select a service</option>
                       <option value="content-creation">AI Content Creation</option>
                       <option value="ghostwriting">Premium Ghostwriting</option>
                       <option value="technical-writing">Technical Writing</option>
                       <option value="email-marketing">Email Marketing</option>
                       <option value="chatbot">Chatbot Development</option>
+                      <option value="facebook-ads">Facebook Ads Management</option>
+                      <option value="shopify">Shopify Website Services</option>
+                      <option value="website-dev">Website Development</option>
                     </select>
                   </div>
                 </div>
                 <div className="space-y-2 mb-6">
                   <Label htmlFor="message">Your Message</Label>
-                  <Textarea id="message" placeholder="Tell us about your project or inquiry..." rows={5} required />
+                  <Textarea 
+                    id="message" 
+                    placeholder="Tell us about your project or inquiry..." 
+                    rows={5} 
+                    value={formData.message}
+                    onChange={handleChange}
+                    maxLength={2000}
+                    className={errors.message ? "border-red-500" : ""}
+                    aria-invalid={!!errors.message}
+                    aria-describedby={errors.message ? "message-error" : undefined}
+                  />
+                  {errors.message && (
+                    <p id="message-error" className="text-red-500 text-sm">{errors.message}</p>
+                  )}
+                  <p className="text-gray-500 text-xs text-right">{formData.message.length}/2000</p>
                 </div>
-                <Button type="submit" size="lg" className="w-full bg-purple-800 hover:bg-purple-900">Send Message</Button>
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-purple-800 hover:bg-purple-900"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
+                </Button>
               </form>
             </div>
           </div>
