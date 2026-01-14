@@ -53,11 +53,11 @@ const Hero = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-2">
                 <Check size={20} className="text-purple-500" />
-                <span>Blog posts & articles</span>
+                <span>LinkedIn & X content</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={20} className="text-purple-500" />
-                <span>Ebooks & guides</span>
+                <span>Blog posts & articles</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check size={20} className="text-purple-500" />
@@ -65,7 +65,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center gap-2">
                 <Check size={20} className="text-purple-500" />
-                <span>LinkedIn & personal branding</span>
+                <span>Ebooks & guides</span>
               </div>
             </div>
             
