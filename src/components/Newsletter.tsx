@@ -1,22 +1,48 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
+
+// Validation schema
+const newsletterSchema = z.object({
+  email: z.string()
+    .trim()
+    .min(1, "Email is required")
+    .email("Please enter a valid email address")
+    .max(255, "Email must be less than 255 characters")
+});
 
 const Newsletter = () => {
   const { toast } = useToast();
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
+
+    // Validate email
+    const result = newsletterSchema.safeParse({ email });
+    
+    if (!result.success) {
+      setError(result.error.errors[0]?.message || "Invalid email");
+      setIsSubmitting(false);
+      return;
+    }
+
+    // Email is valid - show success (backend integration would go here)
     toast({
       title: "Success!",
       description: "You've been subscribed to our newsletter.",
     });
     
     // Reset the form
-    const form = e.target as HTMLFormElement;
-    form.reset();
+    setEmail("");
+    setIsSubmitting(false);
   };
 
   return (
@@ -27,15 +53,32 @@ const Newsletter = () => {
           <p className="mb-8 opacity-90 text-white">
             Get the latest content tips, industry news, and exclusive offers delivered straight to your inbox.
           </p>
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
-            <Input
-              type="email"
-              placeholder="Your email address"
-              required
-              className="bg-white/30 border-white/50 text-white placeholder:text-white/90"
-            />
-            <Button type="submit" variant="secondary" className="bg-white text-black hover:bg-gray-100">
-              Subscribe
+          <form onSubmit={handleSubmit} noValidate className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
+            <div className="flex-1">
+              <Input
+                type="email"
+                placeholder="Your email address"
+                value={email}
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                  if (error) setError(null);
+                }}
+                maxLength={255}
+                className={`bg-white/30 border-white/50 text-white placeholder:text-white/90 ${error ? "border-red-400" : ""}`}
+                aria-invalid={!!error}
+                aria-describedby={error ? "newsletter-error" : undefined}
+              />
+              {error && (
+                <p id="newsletter-error" className="text-red-200 text-sm mt-1 text-left">{error}</p>
+              )}
+            </div>
+            <Button 
+              type="submit" 
+              variant="secondary" 
+              className="bg-white text-black hover:bg-gray-100"
+              disabled={isSubmitting}
+            >
+              {isSubmitting ? "Subscribing..." : "Subscribe"}
             </Button>
           </form>
           <p className="mt-4 text-sm opacity-90 text-white">
