@@ -124,7 +124,7 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Contact Us</SectionEyebrow>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Contact Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Get In Touch</h2>
           <p className="text-purple-100 max-w-2xl mx-auto mb-12">
             Ready to elevate your digital presence? Reach out to discuss your project and
             discover how our services can help you achieve your goals.

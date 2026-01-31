@@ -49,8 +49,8 @@ const Newsletter = () => {
     <section className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-gradient-to-r from-blue-600 to-blue-500">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto text-center text-white reveal">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Subscribe to Our Newsletter</h2>
-          <p className="mb-8 opacity-90 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Stay Ahead of the Curve</h2>
+          <p className="mb-8 text-white/90">
             Get the latest content tips, industry news, and exclusive offers delivered straight to your inbox.
           </p>
           <form onSubmit={handleSubmit} noValidate className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">

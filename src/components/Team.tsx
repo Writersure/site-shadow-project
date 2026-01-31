@@ -19,7 +19,7 @@ const Team = () => {
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Our Expert</SectionEyebrow>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Meet The Expert</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Meet The Expert</h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-12">
             Our talented content specialist brings diverse skills and experience to help your business succeed.
           </p>
