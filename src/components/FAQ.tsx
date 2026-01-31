@@ -56,7 +56,7 @@ const FAQ = () => (
     <div className="container mx-auto">
       <div className="text-center reveal">
         <SectionEyebrow>FAQs</SectionEyebrow>
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Frequently Asked Questions</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">Frequently Asked Questions</h2>
         <p className="text-gray-600 max-w-2xl mx-auto mb-12">
           Have questions? Find quick answers to common inquiries about our
           services, process, and expertise.

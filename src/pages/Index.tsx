@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
 import FeaturedServices from "@/components/FeaturedServices";
 import Services from "@/components/Services";
 import About from "@/components/About";
@@ -91,6 +92,7 @@ const Index = () => {
       <main>
         <div className="space-y-16 lg:space-y-24">
           <Hero />
+          <TrustBar />
           <FeaturedServices />
           <Services />
           <About />

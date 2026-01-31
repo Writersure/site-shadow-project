@@ -53,7 +53,7 @@ const Services = () => {
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Our Services</SectionEyebrow>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">Our Services</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">What We Deliver</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
             Unlock a suite of premium content & digital solutions tailored for your business.
           </p>

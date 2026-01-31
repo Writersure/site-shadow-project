@@ -28,16 +28,19 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="gap-2 bg-purple-800 hover:bg-purple-900">
-                  Get Started 
+                  Book Free Strategy Call
                   <ArrowRight size={18} />
                 </Button>
               </a>
               <a href="#services">
                 <Button variant="outline" size="lg" className="border-purple-800 text-purple-800 hover:bg-purple-100">
-                  View Services
+                  Explore Services
                 </Button>
               </a>
             </div>
+            <p className="text-sm text-muted-foreground mt-4">
+              ✓ No commitment required &nbsp;•&nbsp; ✓ Response within 24 hours
+            </p>
           </div>
 
           <div className="reveal bg-white rounded-xl shadow-lg p-6 lg:p-8">
