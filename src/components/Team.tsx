@@ -3,12 +3,13 @@ import React from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Linkedin, Twitter, Mail } from "lucide-react";
 import SectionEyebrow from "./SectionEyebrow";
+import alexHeadshot from "@/assets/alex-professional-headshot.jpg";
 
 const team = [
   {
     name: "Alex",
     role: "AI Content Specialist",
-    image: "/lovable-uploads/def69d1b-a26e-4e5e-97d9-857e2cf0b414.png",
+    image: alexHeadshot,
     bio: "Expert in AI-powered content creation and digital strategy, specializing in premium ghostwriting and content solutions."
   }
 ];
