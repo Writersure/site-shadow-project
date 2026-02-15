@@ -22,7 +22,7 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <section id="testimonials" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-muted">
+    <section id="testimonials" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-[hsl(220,14%,96%)]">
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Testimonials</SectionEyebrow>
@@ -34,21 +34,17 @@ const Testimonials = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="p-8 border-none shadow-md">
+            <Card key={index} className="p-8 border border-border shadow-sm bg-white">
               <div className="mb-6">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <span key={star} className="text-yellow-400 text-xl">★</span>
+                  <span key={star} className="text-[hsl(40,80%,50%)] text-xl">★</span>
                 ))}
               </div>
-              <p className="text-muted-foreground mb-6 italic text-lg leading-relaxed">"{testimonial.quote}"</p>
+              <p className="text-muted-foreground mb-6 italic leading-relaxed">"{testimonial.quote}"</p>
               <div className="flex items-center">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.author}
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
+                <img src={testimonial.image} alt={testimonial.author} className="w-14 h-14 rounded-full object-cover mr-4" />
                 <div>
-                  <h4 className="font-semibold text-lg text-primary">{testimonial.author}</h4>
+                  <h4 className="font-semibold text-foreground">{testimonial.author}</h4>
                   <p className="text-sm text-muted-foreground">{testimonial.position}</p>
                 </div>
               </div>

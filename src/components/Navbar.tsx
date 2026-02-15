@@ -2,7 +2,14 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { Link } from 'react-router-dom';
+
+const navLinks = [
+  { label: "Home", href: "#home" },
+  { label: "Services", href: "#services" },
+  { label: "About", href: "#about" },
+  { label: "Team", href: "#team" },
+  { label: "Contact Us", href: "#contact" },
+];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,52 +17,56 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    setMobileMenuOpen(false);
+    const target = document.querySelector(href);
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center">
-          <span className="font-bold text-2xl text-purple-800">WriterSure</span>
-        </Link>
+        <a href="#home" onClick={(e) => handleNavClick(e, '#home')} className="flex items-center">
+          <span className="font-bold text-2xl tracking-tight text-primary">WriterSure</span>
+        </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          <div className="flex space-x-5">
-            <Link to="/#home" className="font-medium hover:text-purple-800 transition-colors">Home</Link>
-            <Link to="/#services" className="font-medium hover:text-purple-800 transition-colors">Services</Link>
-            <Link to="/#about" className="font-medium hover:text-purple-800 transition-colors">About</Link>
-            <Link to="/#team" className="font-medium hover:text-purple-800 transition-colors">Team</Link>
-            <Link to="/#contact" className="font-medium hover:text-purple-800 transition-colors">Contact Us</Link>
+        <div className="hidden md:flex items-center gap-8">
+          <div className="flex gap-6">
+            {navLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
-
           <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-purple-800 hover:bg-purple-900">Get Started</Button>
+            <Button className="bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
           </a>
         </div>
 
         {/* Mobile menu button */}
         <div className="md:hidden">
           <button 
-            onClick={toggleMobileMenu}
-            className="text-gray-600 hover:text-purple-800"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="text-foreground/70 hover:text-primary"
             aria-label="Toggle Menu"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -65,18 +76,23 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div 
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 transform ${
+        className={`md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md shadow-lg transition-all duration-300 transform ${
           mobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4 pointer-events-none'
         }`}
       >
         <div className="container mx-auto px-6 py-4 space-y-4">
-          <Link to="/#home" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Home</Link>
-          <Link to="/#services" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Services</Link>
-          <Link to="/#about" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>About</Link>
-          <Link to="/#team" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Team</Link>
-          <Link to="/#contact" className="block font-medium hover:text-purple-800" onClick={toggleMobileMenu}>Contact Us</Link>
-          <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer" onClick={toggleMobileMenu}>
-            <Button className="w-full bg-purple-800 hover:bg-purple-900">Get Started</Button>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="block text-sm font-medium text-foreground/70 hover:text-primary"
+            >
+              {link.label}
+            </a>
+          ))}
+          <a href="https://calendly.com/writersure369/30min" target="_blank" rel="noopener noreferrer" onClick={() => setMobileMenuOpen(false)}>
+            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">Get Started</Button>
           </a>
         </div>
       </div>
