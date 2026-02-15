@@ -8,34 +8,30 @@ const About = () => {
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>About Us</SectionEyebrow>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-black">We’re AI content specialists.</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">We're AI content specialists.</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
             Our mission is to empower businesses and individuals by delivering premium, AI-powered content solutions.
             We blend advanced technology with human expertise for flawless results.
           </p>
         </div>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 reveal">
-            <h3 className="text-xl font-semibold mb-2 text-primary">Our Vision</h3>
-            <p className="text-gray-600">To be the leading provider of AI-driven content solutions, transforming how businesses communicate and engage with their audience.</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 reveal" style={{transitionDelay: '0.1s'}}>
-            <h3 className="text-xl font-semibold mb-2 text-primary">Our Mission</h3>
-            <p className="text-gray-600">To empower businesses and individuals by delivering premium, AI-powered content solutions that drive growth and success.</p>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 reveal" style={{transitionDelay: '0.2s'}}>
-            <h3 className="text-xl font-semibold mb-2 text-primary">Our Values</h3>
-            <ul className="list-disc list-inside text-gray-600">
-              <li>Innovation</li>
-              <li>Quality</li>
-              <li>Collaboration</li>
-              <li>Customer Focus</li>
-            </ul>
-          </div>
-          <div className="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-all duration-300 reveal" style={{transitionDelay: '0.3s'}}>
-            <h3 className="text-xl font-semibold mb-2 text-primary">Why Choose Us?</h3>
-            <p className="text-gray-600">We combine cutting-edge AI technology with human expertise to deliver exceptional content solutions tailored to your needs.</p>
-          </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            { title: "Our Vision", content: "To be the leading provider of AI-driven content solutions, transforming how businesses communicate and engage with their audience." },
+            { title: "Our Mission", content: "To empower businesses and individuals by delivering premium, AI-powered content solutions that drive growth and success." },
+            { title: "Our Values", list: ["Innovation", "Quality", "Collaboration", "Customer Focus"] },
+            { title: "Why Choose Us?", content: "We combine cutting-edge AI technology with human expertise to deliver exceptional content solutions tailored to your needs." },
+          ].map((card, idx) => (
+            <div key={idx} className="bg-[hsl(220,14%,96%)] p-6 rounded-xl border border-border hover:shadow-md transition-all duration-300 reveal" style={{ transitionDelay: `${idx * 0.1}s` }}>
+              <h3 className="text-lg font-semibold mb-3 text-foreground">{card.title}</h3>
+              {card.list ? (
+                <ul className="list-disc list-inside text-muted-foreground text-sm space-y-1">
+                  {card.list.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              ) : (
+                <p className="text-muted-foreground text-sm leading-relaxed">{card.content}</p>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
