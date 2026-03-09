@@ -7,7 +7,7 @@ import alexHeadshot from "@/assets/alex-professional-headshot.jpg";
 
 const team = [
   {
-    name: "Alex",
+    name: "Alex Alney",
     role: "AI Content Specialist",
     image: alexHeadshot,
     bio: "Expert in AI-powered content creation and digital strategy, specializing in premium ghostwriting and content solutions."
