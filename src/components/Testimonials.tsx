@@ -4,8 +4,15 @@ import { Card } from "@/components/ui/card";
 import SectionEyebrow from "./SectionEyebrow";
 import alyzeSamImg from "@/assets/alyze-sam.png";
 import svenLaueImg from "@/assets/sven-laue.png";
+import shahyanMerchantImg from "@/assets/shahyan-merchant.webp";
 
 const testimonials = [
+  {
+    quote: "I feel very fortunate to have found Alex. I've always had plenty of ideas and concepts, but translating those thoughts into something clear and compelling for a wider audience was never my strength. Alex has been an exceptional partner in helping bring those ideas to life. He has provided thoughtful guidance, strong ghostwriting support, and valuable strategic advice throughout the process. Alex has a rare ability to take complex thoughts and shape them into clear, engaging narratives that resonate with readers. For anyone who has meaningful ideas but simply hasn't had the time or the right words to put them onto paper, I would highly recommend working with Alex.",
+    author: "Shahyan Merchant",
+    position: "Power Systems Head, Financial Strategy, Origination & Due Diligence; and M&A, Global Renewables — Aramco",
+    image: shahyanMerchantImg
+  },
   {
     quote: "I've had the pleasure of working with Alex on several of my complex startups, and I am consistently impressed by his professionalism and skill. His editing and ghostwriting are so helpful, but what truly sets him apart is his collaborative approach. He listens attentively, provides thoughtful feedback, and always strives to elevate people and the work they do. Alex's empathy and communication skills made launches seamless and enjoyable. I wholeheartedly recommend him.",
     author: "Alyze Sam",

@@ -22,7 +22,7 @@ const AdSense = ({
   useEffect(() => {
     try {
       // Skip ad rendering during development to avoid console errors
-      if (process.env.NODE_ENV === 'development') {
+      if (import.meta.env.DEV) {
         return;
       }
       

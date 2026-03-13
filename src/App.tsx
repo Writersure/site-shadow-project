@@ -15,7 +15,7 @@ const App = () => {
   useEffect(() => {
     // Initialize AdSense when the app loads
     try {
-      if (window.adsbygoogle && process.env.NODE_ENV === 'production') {
+      if (window.adsbygoogle && import.meta.env.PROD) {
         window.adsbygoogle.push({
           google_ad_client: "ca-pub-XXXXXXXXXXXXXXXX", // Replace with your actual AdSense publisher ID
         });
