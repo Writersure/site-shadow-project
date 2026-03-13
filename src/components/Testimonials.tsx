@@ -30,7 +30,7 @@ const testimonials = [
   {
     paragraphs: ["Working with Alex was an excellent experience. He supported me in preparing my lecture materials and to create a consistent lecture from my notes. Communication was clear, feedback thoughtful, and delivery consistently on time."],
     author: "Sven Laue",
-    position: "Consultant, Laue Consulting",
+    position: "CEO, Laue Consulting — Lecturer in Finance & Controlling, University of Europe for Applied Sciences",
     image: svenLaueImg
   }
 ];
