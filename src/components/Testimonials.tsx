@@ -39,7 +39,7 @@ const Testimonials = () => {
             our content creation and digital services.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="p-8 border border-border shadow-sm bg-white">
               <div className="mb-6">
