@@ -18,7 +18,11 @@ const testimonials = [
     image: shahyanMerchantImg
   },
   {
-    paragraphs: ["I've had the pleasure of working with Alex on several of my complex startups, and I am consistently impressed by his professionalism and skill. His editing and ghostwriting are so helpful, but what truly sets him apart is his collaborative approach. He listens attentively, provides thoughtful feedback, and always strives to elevate people and the work they do. Alex's empathy and communication skills made launches seamless and enjoyable. I wholeheartedly recommend him."],
+    paragraphs: [
+      "I've had the pleasure of working with Alex on several of my complex startups, and I am consistently impressed by his professionalism and skill.",
+      "His editing and ghostwriting are so helpful, but what truly sets him apart is his collaborative approach. He listens attentively, provides thoughtful feedback, and always strives to elevate people and the work they do. Alex's empathy and communication skills made launches seamless and enjoyable.",
+      "I wholeheartedly recommend him."
+    ],
     author: "Alyze Sam",
     position: "Survivor, Serial Co-Founder, Multi Award-Winning Author",
     image: alyzeSamImg
