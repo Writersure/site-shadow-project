@@ -24,7 +24,7 @@ const testimonials = [
       "I wholeheartedly recommend him."
     ],
     author: "Alyze Sam",
-    position: "Survivor, Serial Co-Founder, Multi Award-Winning Author",
+    position: "Survivor, Serial Co-Founder, Multi Award-Winning Author — Serving the Blockchain Community",
     image: alyzeSamImg
   },
   {
