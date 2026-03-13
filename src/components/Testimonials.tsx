@@ -30,10 +30,32 @@ const testimonials = [
     image: svenLaueImg
   }
 ];
-...
-              <div className="text-muted-foreground mb-6 italic leading-relaxed space-y-3">
+
+const Testimonials = () => {
+  return (
+    <section id="testimonials" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-[hsl(220,14%,96%)]">
+      <div className="container mx-auto">
+        <div className="text-center reveal">
+          <SectionEyebrow>Testimonials</SectionEyebrow>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">What Our Clients Say</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto mb-12">
+            Don't just take our word for it. Here's what our satisfied clients have to say about 
+            our content creation and digital services.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="p-8 border border-border shadow-sm bg-white flex flex-col">
+              <div className="mb-6">
+                {[1, 2, 3, 4, 5].map((star) => (
+                  <span key={star} className="text-[hsl(40,80%,50%)] text-xl">★</span>
+                ))}
+              </div>
+              <div className="text-muted-foreground mb-6 italic leading-relaxed space-y-3 flex-1">
                 {testimonial.paragraphs.map((para, i) => (
-                  <p key={i}>{i === 0 ? '"' : ''}{para}{i === testimonial.paragraphs.length - 1 ? '"' : ''}</p>
+                  <p key={i}>
+                    {i === 0 ? '\u201C' : ''}{para}{i === testimonial.paragraphs.length - 1 ? '\u201D' : ''}
+                  </p>
                 ))}
               </div>
               <div className="flex items-center">
