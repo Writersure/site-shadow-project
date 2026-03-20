@@ -11,7 +11,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section id="process" className="py-16 md:py-24 px-4 md:px-8 lg:px-12 bg-white">
+    <section id="process" className="pb-16 md:pb-24 px-4 md:px-8 lg:px-12 bg-white">
       <div className="container mx-auto">
         <div className="text-center reveal">
           <SectionEyebrow>Our Process</SectionEyebrow>
