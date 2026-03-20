@@ -5,7 +5,7 @@ import TrustBar from "@/components/TrustBar";
 import FeaturedServices from "@/components/FeaturedServices";
 import Services from "@/components/Services";
 import About from "@/components/About";
-import SampleWork from "@/components/SampleWork";
+
 import Team from "@/components/Team";
 import Process from "@/components/Process";
 import Testimonials from "@/components/Testimonials";
@@ -37,7 +37,7 @@ const Index = () => {
           <FeaturedServices />
           <Services />
           <About />
-          <SampleWork />
+          
           <HomeAdsPlacement />
           <Process />
           <Team />
