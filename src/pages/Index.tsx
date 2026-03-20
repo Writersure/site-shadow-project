@@ -14,7 +14,7 @@ import Contact from "@/components/Contact";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import HomeAdsPlacement from "@/components/HomeAdsPlacement";
+
 import { initAnimateOnScroll } from "@/utils/animateOnScroll";
 
 const Index = () => {
