@@ -7,6 +7,7 @@ import svenLaueImg from "@/assets/sven-laue.png";
 import shahyanMerchantImg from "@/assets/shahyan-merchant.webp";
 import rajSinghImg from "@/assets/raj-singh.jpg";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
@@ -51,7 +52,8 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" });
+  const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [autoplay]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
