@@ -7,6 +7,7 @@ import svenLaueImg from "@/assets/sven-laue.png";
 import shahyanMerchantImg from "@/assets/shahyan-merchant.webp";
 import rajSinghImg from "@/assets/raj-singh.jpg";
 import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
