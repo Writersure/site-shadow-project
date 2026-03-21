@@ -53,7 +53,7 @@ const testimonials = [
 
 const Testimonials = () => {
   const autoplay = Autoplay({ delay: 4000, stopOnInteraction: false });
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start" }, [autoplay]);
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align: "start", watchDrag: false }, [autoplay]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
