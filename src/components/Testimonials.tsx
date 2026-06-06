@@ -113,7 +113,7 @@ const Testimonials = () => {
                     <div className="flex items-center">
                       <img src={testimonial.image} alt={testimonial.author} className="w-14 h-14 rounded-full object-cover mr-4 flex-shrink-0" />
                       <div>
-                        <h4 className="font-semibold text-foreground">{testimonial.author}</h4>
+                        <h3 className="font-semibold text-foreground">{testimonial.author}</h3>
                         <p className="text-sm text-muted-foreground">{testimonial.position}</p>
                       </div>
                     </div>

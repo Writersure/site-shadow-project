@@ -56,9 +56,11 @@ const Hero = () => {
               ))}
             </div>
             
-            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
-              Learn More
-            </Button>
+            <a href="#services">
+              <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+                View Ghostwriting Details
+              </Button>
+            </a>
           </div>
         </div>
       </div>
