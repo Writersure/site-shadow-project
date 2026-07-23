@@ -45,7 +45,7 @@ const Contact = () => {
     const result = contactSchema.safeParse(formData);
     if (!result.success) {
       const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
-      result.error.errors.forEach((err) => {
+      result.error.issues.forEach((err) => {
         const field = err.path[0] as keyof ContactFormData;
         if (!fieldErrors[field]) fieldErrors[field] = err.message;
       });

@@ -21,7 +21,7 @@ const Newsletter = () => {
     setError(null);
     const result = newsletterSchema.safeParse({ email });
     if (!result.success) {
-      setError(result.error.errors[0]?.message || "Invalid email");
+      setError(result.error.issues[0]?.message || "Invalid email");
       setIsSubmitting(false);
       return;
     }
